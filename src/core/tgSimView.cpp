@@ -24,10 +24,10 @@
  */
 
 // This module
-#include "tgSimulation.h"
+#include "ntrt/core/tgSimulation.h"
 // This application
-#include "tgModelVisitor.h"
-#include "tgSimView.h"
+#include "ntrt/core/tgModelVisitor.h"
+#include "ntrt/core/tgSimView.h"
 // The C++ Standard Library
 #include <cassert>  
 #include <iostream>

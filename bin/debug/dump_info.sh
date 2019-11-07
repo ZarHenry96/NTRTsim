@@ -1,2 +1,0 @@
-gcc -v
-uname -a

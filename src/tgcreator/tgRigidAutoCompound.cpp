@@ -25,10 +25,10 @@
  */
 
 // This module
-#include "tgRigidAutoCompound.h"
+#include "ntrt/tgcreator/tgRigidAutoCompound.h"
+#include "ntrt/tgcreator/tgCompoundRigidInfo.h"
 // Bullet Physics
 #include "BulletSoftBody/btSoftRigidDynamicsWorld.h"
-#include "tgCompoundRigidInfo.h"
 // The C++ standard library
 #include <map>
 #include <cstdlib> // for random number generator

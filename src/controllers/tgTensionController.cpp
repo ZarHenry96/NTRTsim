@@ -24,11 +24,11 @@
  * $Id$
  */
 
-#include "tgTensionController.h"
+#include "ntrt/controllers/tgTensionController.h"
 
-#include "core/tgBasicActuator.h"
-#include "core/tgSpringCable.h"
-#include "core/tgCast.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgSpringCable.h"
+#include "ntrt/core/tgCast.h"
 
 // The C++ Standard Library
 #include <cassert>

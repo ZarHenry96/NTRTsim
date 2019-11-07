@@ -23,15 +23,15 @@
  */
 
 // This module
-#include "tgBlockField.h"
+#include "ntrt/models/obstacles/tgBlockField.h"
 // This library
-#include "core/tgBox.h"
-#include "tgcreator/tgBuildSpec.h"
-#include "tgcreator/tgBoxInfo.h"
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
-#include "tgcreator/tgNode.h"
-#include "tgcreator/tgUtil.h"
+#include "ntrt/core/tgBox.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgBoxInfo.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
+#include "ntrt/tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgUtil.h"
 // The Bullet Physics library
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library

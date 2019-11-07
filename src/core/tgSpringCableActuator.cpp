@@ -24,9 +24,9 @@
  */
 
 // This Module
-#include "tgSpringCableActuator.h"
-#include "tgSpringCable.h"
-#include "tgWorld.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgSpringCable.h"
+#include "ntrt/core/tgWorld.h"
 // The C++ Standard Library
 #include <cmath>
 #include <iostream>

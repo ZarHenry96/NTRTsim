@@ -25,9 +25,9 @@
  */
 
 // This module
-#include "tgBulletUnidirComprSpr.h"
-#include "tgBulletSpringCableAnchor.h"
-#include "tgCast.h"
+#include "ntrt/core/tgBulletUnidirComprSpr.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgCast.h"
 // The BulletPhysics library
 #include "BulletDynamics/Dynamics/btRigidBody.h"
 // The C++ standard library

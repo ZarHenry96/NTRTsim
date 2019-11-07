@@ -26,11 +26,11 @@
  */
 
 // This Module
-#include "tgUnidirComprSprActuator.h"
+#include "ntrt/core/tgUnidirComprSprActuator.h"
 // NTRT core library files
-#include "core/tgBulletUnidirComprSpr.h"
-#include "core/tgModelVisitor.h"
-#include "core/tgWorld.h"
+#include "ntrt/core/tgBulletUnidirComprSpr.h"
+#include "ntrt/core/tgModelVisitor.h"
+#include "ntrt/core/tgWorld.h"
 // The Bullet Physics Library
 #include "LinearMath/btQuickprof.h"
 

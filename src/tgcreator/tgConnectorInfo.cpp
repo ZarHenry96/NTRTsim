@@ -24,13 +24,12 @@
  * $Id$
  */
 
-#include "tgConnectorInfo.h"
+#include "ntrt/tgcreator/tgConnectorInfo.h"
+#include "ntrt/tgcreator/tgPair.h"
+#include "ntrt/tgcreator/tgPairs.h"
+#include "ntrt/tgcreator/tgRigidInfo.h"
 
-#include "tgPair.h"
-#include "tgPairs.h"
-#include "tgRigidInfo.h"
-
-#include "core/tgTagSearch.h"
+#include "ntrt/core/tgTagSearch.h"
 
 #include "LinearMath/btVector3.h"
 #include "BulletDynamics/Dynamics/btRigidBody.h"

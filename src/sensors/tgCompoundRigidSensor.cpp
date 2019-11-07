@@ -25,13 +25,13 @@
  */
 
 // This class:
-#include "tgCompoundRigidSensor.h"
+#include "ntrt/sensors/tgCompoundRigidSensor.h"
 
 // Includes from NTRT:
-#include "core/tgSenseable.h"
-#include "core/tgCast.h"
-#include "core/tgTags.h"
-#include "core/tgBaseRigid.h"
+#include "ntrt/core/tgSenseable.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/tgTags.h"
+#include "ntrt/core/tgBaseRigid.h"
 
 // Includes from the c++ standard library:
 //#include <iostream>

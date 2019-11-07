@@ -24,10 +24,8 @@
  * $Id$
  */
 
-#include "tgPair.h"
-
-#include "tgUtil.h"
-
+#include "ntrt/tgcreator/tgPair.h"
+#include "ntrt/tgcreator/tgUtil.h"
 
 tgPair::tgPair() : tgTaggable() {}
 

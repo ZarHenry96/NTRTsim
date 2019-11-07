@@ -24,7 +24,7 @@
  * $Id$
  */
 
-#include "tgKinematicActuatorInfo.h"
+#include "ntrt/tgcreator/tgKinematicActuatorInfo.h"
 
 tgKinematicActuatorInfo::tgKinematicActuatorInfo(const tgKinematicActuator::Config& config) : 
 m_config(config),

@@ -1,0 +1,16 @@
+project(dev)
+
+# Add additional dev directories here.
+add_subdirectory(axydes)
+add_subdirectory(radams)
+add_subdirectory(tests)
+add_subdirectory(atil)
+add_subdirectory(steve)
+add_subdirectory(kmorse)
+add_subdirectory(apsabelhaus)
+add_subdirectory(ultra-spine)
+add_subdirectory(muscleNP)
+add_subdirectory(jbruce)
+add_subdirectory(eajung)
+add_subdirectory(ezhu)
+add_subdirectory(mcdaly)

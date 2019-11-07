@@ -26,12 +26,12 @@
 #include "examples/IROS_2015/TetraSpineStatic/TetraSpineStaticModel_hf.h"
 #include "examples/IROS_2015/TetraSpineStatic/SerializedSpineControl.h"
 // This library
-#include "core/tgModel.h"
-#include "core/tgSimView.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
-#include "helpers/FileHelpers.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/helpers/FileHelpers.h"
 // The C++ Standard Library
 #include <iostream>
 #include <fstream>

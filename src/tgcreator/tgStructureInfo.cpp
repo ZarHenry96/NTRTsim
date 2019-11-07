@@ -25,13 +25,13 @@
  */
 
 // This module
-#include "tgStructureInfo.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
 // This library
-#include "tgConnectorInfo.h"
-#include "tgRigidAutoCompound.h"
-#include "tgStructure.h"
-#include "core/tgWorld.h"
-#include "core/tgModel.h"
+#include "ntrt/tgcreator/tgConnectorInfo.h"
+#include "ntrt/tgcreator/tgRigidAutoCompound.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/tgModel.h"
 // The C++ Standard Library
 #include <stdexcept>
 

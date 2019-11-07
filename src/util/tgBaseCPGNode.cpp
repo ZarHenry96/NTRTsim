@@ -25,10 +25,10 @@
  */
 
 // This module
-#include "tgBaseCPGNode.h"
+#include "ntrt/util/tgBaseCPGNode.h"
+#include "ntrt/util/CPGEquations.h"
 // This library
-#include "controllers/tgImpedanceController.h"
-#include "CPGEquations.h"
+#include "ntrt/controllers/tgImpedanceController.h"
 // The C++ Standard Library
 #include <iostream>
 #include <stdexcept>

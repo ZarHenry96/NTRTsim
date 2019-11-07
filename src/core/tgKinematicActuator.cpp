@@ -24,11 +24,11 @@
  */
 
 // This Module
-#include "tgKinematicActuator.h"
+#include "ntrt/core/tgKinematicActuator.h"
 // The NTRT Core libary
-#include "core/tgBulletSpringCable.h"
-#include "core/tgModelVisitor.h"
-#include "core/tgWorld.h"
+#include "ntrt/core/tgBulletSpringCable.h"
+#include "ntrt/core/tgModelVisitor.h"
+#include "ntrt/core/tgWorld.h"
 // The Bullet Physics Library
 #include "LinearMath/btQuickprof.h"
 

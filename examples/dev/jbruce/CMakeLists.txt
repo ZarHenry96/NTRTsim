@@ -1,0 +1,5 @@
+project(jbruce)
+
+add_subdirectory(twoSpringSUPERball)
+add_subdirectory(internalFriction)
+add_subdirectory(sineWaveEscapeController)

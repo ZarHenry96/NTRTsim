@@ -24,7 +24,7 @@
  */
 
 //This Module
-#include "tgEmptyGround.h"
+#include "ntrt/core/terrain/tgEmptyGround.h"
 
 //Bullet Physics
 #include "BulletDynamics/Dynamics/btRigidBody.h"

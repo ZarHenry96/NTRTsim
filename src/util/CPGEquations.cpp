@@ -24,7 +24,7 @@
  * $Id$
  */
 
-#include "CPGEquations.h"
+#include "ntrt/util/CPGEquations.h"
 
 #include "boost/array.hpp"
 #include "boost/numeric/odeint.hpp"

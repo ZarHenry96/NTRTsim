@@ -24,7 +24,7 @@
  */
 
 //This Module
-#include "tgBoxGround.h"
+#include "ntrt/core/terrain/tgBoxGround.h"
 
 //Bullet Physics
 #include "BulletCollision/CollisionShapes/btBoxShape.h"

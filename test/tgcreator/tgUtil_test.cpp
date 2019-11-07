@@ -24,7 +24,7 @@
 */
 
 // This application
-#include "tgcreator/tgUtil.h"
+#include "ntrt/tgcreator/tgUtil.h"
 // The Bullet Physics Library
 #include "LinearMath/btVector3.h"
 #include "LinearMath/btQuaternion.h"

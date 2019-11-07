@@ -23,9 +23,9 @@
  */
 
 // This module
-#include "tgBulletSpringCable.h"
-#include "tgBulletSpringCableAnchor.h"
-#include "tgCast.h"
+#include "ntrt/core/tgBulletSpringCable.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgCast.h"
 // The BulletPhysics library
 #include "BulletDynamics/Dynamics/btRigidBody.h"
 

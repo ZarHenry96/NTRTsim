@@ -23,12 +23,12 @@
  * $Id$
  */
 
-#include "tgDataLogger.h"
+#include "ntrt/sensors/tgDataLogger.h"
 
-#include "util/tgBaseCPGNode.h"
-#include "core/tgSpringCableActuator.h"
-#include "core/tgRod.h"
-#include "core/abstractMarker.h"
+#include "ntrt/util/tgBaseCPGNode.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/core/abstractMarker.h"
 
 #include "LinearMath/btVector3.h"
 

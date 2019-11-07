@@ -24,8 +24,8 @@
  */
 
 // This module
-#include "tgSphere.h"
-#include "tgModelVisitor.h"
+#include "ntrt/core/tgSphere.h"
+#include "ntrt/core/tgModelVisitor.h"
 // The Bullet Physics library
 #include "BulletDynamics/Dynamics/btRigidBody.h"
 #include "btBulletDynamicsCommon.h"

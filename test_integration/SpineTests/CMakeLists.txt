@@ -1,13 +1,17 @@
-link_directories(${ENV_LIB_DIR} ${NTRT_BUILD_DIR})
+project(WorldConf_Spines_test)
 
-link_libraries(
-                tgOpenGLSupport)
-             
-add_executable(WorldConf_Spines_test
-	WorldConf_Spines_test.cpp)
+add_executable(${PROJECT_NAME} WorldConf_Spines_test.cpp)
 
-target_link_libraries(WorldConf_Spines_test ${ENV_LIB_DIR}/libgtest.a pthread 
-												${NTRT_BUILD_DIR}/core/libcore.so 
-												${NTRT_BUILD_DIR}/helpers/libFileHelpers.so 
-												${NTRT_BUILD_DIR}/examples/learningSpines/liblearningSpines.so
-												${NTRT_BUILD_DIR}/examples/learningSpines/TetrahedralComplex/libTetrahedralComplex.so)
+target_link_directories(${PROJECT_NAME} PUBLIC
+		${CMAKE_SOURCE_DIR}/include/ntrt
+)
+target_link_libraries(${PROJECT_NAME}
+		GTest
+		pthread
+		ntrt::core
+		ntrt::core::terrain
+		ntrt::tgcreator
+		ntrt::helpers::FileHelpers
+		${CMAKE_BINARY_DIR}/examples/apps/learningSpines/liblearningSpines.so
+		${CMAKE_BINARY_DIR}/examples/apps/learningSpines/TetrahedralComplex/libTetrahedralComplex.so
+)

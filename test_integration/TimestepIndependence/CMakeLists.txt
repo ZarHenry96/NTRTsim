@@ -1,11 +1,12 @@
-link_directories(${ENV_LIB_DIR} ${NTRT_BUILD_DIR})
-
-link_libraries(
-                tgOpenGLSupport)
+project(MotorTimestep_test)
              
-add_executable(MotorTimestep_test
-	MotorTimestep_test.cpp)
-
-target_link_libraries(MotorTimestep_test ${ENV_LIB_DIR}/libgtest.a pthread 
-			${NTRT_BUILD_DIR}/core/libcore.so
-			${NTRT_BUILD_DIR}/examples/motorModel/libTimestepTest.so)
+add_executable(${PROJECT_NAME} MotorTimestep_test.cpp)
+target_link_directories(${PROJECT_NAME} PUBLIC
+		${CMAKE_SOURCE_DIR}/include/ntrt
+)
+target_link_libraries(${PROJECT_NAME}
+		pthread
+		ntrt::tgOpenGLSupport
+		ntrt::core
+		${CMAKE_BINARY_DIR}/examples/motorModel/libTimestepTest.so
+)

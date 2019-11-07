@@ -25,11 +25,11 @@
  */
 
 // This class
-#include "tgCompressionSpringActuatorInfo.h"
+#include "ntrt/tgcreator/tgCompressionSpringActuatorInfo.h"
 
 // Other classes from core
-#include "core/tgBulletCompressionSpring.h"
-#include "core/tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgBulletCompressionSpring.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
 
 tgCompressionSpringActuatorInfo::tgCompressionSpringActuatorInfo(const tgCompressionSpringActuator::Config& config) : 
 m_config(config),

@@ -24,11 +24,11 @@
  */
 
 // This module
-#include "tgDataManager.h"
+#include "ntrt/sensors/tgDataManager.h"
 // This application
-#include "tgSensor.h"
-#include "core/tgSenseable.h"
-#include "tgSensorInfo.h"
+#include "ntrt/sensors/tgSensor.h"
+#include "ntrt/sensors/tgSensorInfo.h"
+#include "ntrt/core/tgSenseable.h"
 // The C++ Standard Library
 //#include <stdio.h> // for sprintf
 #include <iostream>

@@ -42,7 +42,7 @@ unsigned long long rdtsc(){
  * $Id$
  */
 
-#include "tgUtil.h"
+#include "ntrt/tgcreator/tgUtil.h"
 
 void tgUtil::seedRandom()
 {

@@ -24,7 +24,7 @@
  * $Id$
  */
 
-#include "CPGNodeFB.h"
+#include "ntrt/util/CPGNodeFB.h"
 
 // The Bullet Physics Library
 #include "LinearMath/btQuickprof.h"

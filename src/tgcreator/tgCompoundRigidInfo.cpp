@@ -23,7 +23,7 @@
  * @date January 2014
  * $Id$
  */
-#include "tgCompoundRigidInfo.h"
+#include "ntrt/tgcreator/tgCompoundRigidInfo.h"
 
 tgCompoundRigidInfo::tgCompoundRigidInfo() : m_compoundShape(NULL), tgRigidInfo()
 {

@@ -25,12 +25,12 @@
  */
 
 // This module
-#include "tgSpringCableActuatorSensorInfo.h"
+#include "ntrt/sensors/tgSpringCableActuatorSensorInfo.h"
 // Other includes from NTRTsim
-#include "tgSpringCableActuatorSensor.h"
-#include "core/tgSpringCableActuator.h"
-#include "core/tgSenseable.h"
-#include "core/tgCast.h"
+#include "ntrt/sensors/tgSpringCableActuatorSensor.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgSenseable.h"
+#include "ntrt/core/tgCast.h"
 // Other includes from the C++ standard library
 #include <stdexcept>
 

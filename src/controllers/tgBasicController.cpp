@@ -24,9 +24,9 @@
  * $Id$
  */
 
-#include "tgBasicController.h"
+#include "ntrt/controllers/tgBasicController.h"
 
-#include "core/tgControllable.h"
+#include "ntrt/core/tgControllable.h"
 
 // The C++ Standard Library
 #include <cassert>

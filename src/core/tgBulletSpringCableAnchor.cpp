@@ -22,7 +22,7 @@
  * $Id$
  */
  
-#include "tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
 
 // The BulletPhysics library
 #include "BulletDynamics/Dynamics/btRigidBody.h"

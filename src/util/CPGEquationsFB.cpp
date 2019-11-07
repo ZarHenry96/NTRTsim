@@ -24,9 +24,8 @@
  * $Id$
  */
 
-#include "CPGEquationsFB.h"
-
-#include "core/tgCast.h"
+#include "ntrt/util/CPGEquationsFB.h"
+#include "ntrt/core/tgCast.h"
 
 #include "boost/array.hpp"
 #include "boost/numeric/odeint.hpp"

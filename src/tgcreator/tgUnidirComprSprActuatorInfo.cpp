@@ -25,15 +25,15 @@
  */
 
 // This class
-#include "tgUnidirComprSprActuatorInfo.h"
+#include "ntrt/tgcreator/tgUnidirComprSprActuatorInfo.h"
 
 // Other classes from core (are these included from the superclass?...)
 //#include "core/tgBulletCompressionSpring.h"
-#include "core/tgBulletSpringCableAnchor.h"
-#include "core/tgCast.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgCast.h"
 
 // Include the new type of spring
-#include "core/tgBulletUnidirComprSpr.h"
+#include "ntrt/core/tgBulletUnidirComprSpr.h"
 
 /**
  * Constructor auxiliary method, does some debugging and error checking.

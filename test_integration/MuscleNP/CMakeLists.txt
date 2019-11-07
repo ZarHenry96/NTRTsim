@@ -1,14 +1,14 @@
-link_directories(${ENV_LIB_DIR} ${NTRT_BUILD_DIR})
+project(MuscleNP_test)
 
-link_libraries( tgOpenGLSupport
-                )
-             
-add_executable(MuscleNP_test
-	MuscleNP_test.cpp)
-
-target_link_libraries(MuscleNP_test ${ENV_LIB_DIR}/libgtest.a pthread 
-												${NTRT_BUILD_DIR}/core/libcore.so 
-												${NTRT_BUILD_DIR}/core/terrain/libterrain.so 
-												${NTRT_BUILD_DIR}/tgcreator/libtgcreator.so
-												${NTRT_BUILD_DIR}/examples/contactCables/libContactCableCons.so
-												 )
+add_executable(${PROJECT_NAME} MuscleNP_test.cpp)
+target_link_directories(${PROJECT_NAME} PUBLIC
+		${CMAKE_SOURCE_DIR}/include/ntrt
+)
+target_link_libraries(${PROJECT_NAME}
+		GTest
+		pthread
+		ntrt::core
+		ntrt::core::terrain
+		ntrt::tgcreator
+		${CMAKE_BINARY_DIR}/examples/apps/contactCables/libContactCableCons.so
+)

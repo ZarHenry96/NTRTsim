@@ -1,38 +1,21 @@
-cmake_minimum_required(VERSION 2.6)
+add_subdirectory(tgOpenGLSupport)
+add_subdirectory(core)
+add_subdirectory(controllers)
+add_subdirectory(helpers)
+add_subdirectory(util)
+add_subdirectory(sensors)
+add_subdirectory(tgcreator)
+add_subdirectory(models)
+add_subdirectory(learning)
 
-PROJECT(NASA_Tensegrity_Robotics_Toolkit)
-
-# Add your subdirectories here
-subdirs(
-    core
-    helpers
-    learning
-    util
-    sensors
-    tgcreator
-    models
-    controllers
-    dev
-    examples
-    yamlbuilder
+add_library(ntrt
+        tgOpenGLSupport
+        core
+        controllers
+        helpers
+        util
+        tgcreator
+        models
+        learning
 )
-
-# To turn off verbose compiling, comment out
-# the -Wall below.
-#add_definitions(
-#    -Wall
-#)
-
-# Don't need to edit below this line.
-
-# Set some convenience variables
-
-SET(ENV_DIR ${PROJECT_SOURCE_DIR}/../env)
-SET(ENV_INC_DIR ${ENV_DIR}/include)
-SET(ENV_LIB_DIR ${ENV_DIR}/lib)
-
-# Bring in the bullet graphics dependencies, etc. 
-
-include(inc.CMakeBullet.txt)
-
-
+set_target_properties(ntrt PROPERTIES LINKER_LANGUAGE CXX)

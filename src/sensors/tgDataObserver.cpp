@@ -24,17 +24,15 @@
  * $Id$
  */
 
-#include "tgDataObserver.h"
+#include "ntrt/sensors/tgDataObserver.h"
+#include "ntrt/sensors/tgDataLogger.h"
 
-#include "tgDataLogger.h"
-
-#include "core/tgCast.h"
-#include "core/tgModel.h"
-#include "core/tgRod.h"
-#include "core/tgString.h"
-#include "core/abstractMarker.h"
-
-#include "core/tgSpringCableActuator.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/core/tgString.h"
+#include "ntrt/core/abstractMarker.h"
+#include "ntrt/core/tgSpringCableActuator.h"
 
 #include <iostream>
 #include <sstream>  

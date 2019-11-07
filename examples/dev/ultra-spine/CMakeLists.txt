@@ -1,0 +1,6 @@
+project(ultra-spine)
+
+add_subdirectory(VerticalSpine)
+add_subdirectory(VerticalSpine_CableCollision)
+add_subdirectory(HorizontalSpine)
+add_subdirectory(SpineKinematicsTest)

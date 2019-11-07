@@ -25,12 +25,12 @@
  */
 
 // This class:
-#include "tgSpringCableActuatorSensor.h"
+#include "ntrt/sensors/tgSpringCableActuatorSensor.h"
 
 // Includes from NTRT:
-#include "core/tgSenseable.h"
-#include "core/tgCast.h"
-#include "core/tgTags.h"
+#include "ntrt/core/tgSenseable.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/tgTags.h"
 
 // Includes from the c++ standard library:
 #include <sstream>  

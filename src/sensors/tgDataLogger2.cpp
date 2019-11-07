@@ -24,9 +24,9 @@
  */
 
 // This module
-#include "tgDataLogger2.h"
+#include "ntrt/sensors/tgDataLogger2.h"
 // This application
-#include "tgSensor.h"
+#include "ntrt/sensors/tgSensor.h"
 // The C++ Standard Library
 #include <stdexcept>
 #include <cassert>

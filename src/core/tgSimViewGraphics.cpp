@@ -24,12 +24,12 @@
  */
 
 // This module
-#include "tgSimViewGraphics.h"
+#include "ntrt/core/tgSimViewGraphics.h"
 // This application
-#include "tgBulletUtil.h"
-#include "tgSimulation.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgSimulation.h"
 // Bullet OpenGL_FreeGlut (patched files)
-#include "tgGLDebugDrawer.h"
+#include "ntrt/tgOpenGLSupport/tgOpengGLFreeGlut/tgGLDebugDrawer.h"
 // The Bullet Physics library
 #include "BulletSoftBody/btSoftRigidDynamicsWorld.h"
 

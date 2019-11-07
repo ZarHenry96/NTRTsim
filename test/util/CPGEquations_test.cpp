@@ -24,8 +24,8 @@
 */
 
 // This application
-#include "util/CPGEquations.h"
-#include "util/CPGNode.h"
+#include "ntrt/util/CPGEquations.h"
+#include "ntrt/util/CPGNode.h"
 // The Bullet Physics Library
 #include "LinearMath/btVector3.h"
 #include "LinearMath/btQuaternion.h"

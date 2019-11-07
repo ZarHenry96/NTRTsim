@@ -24,13 +24,13 @@
  */
 
 // This module
-#include "tgCompoundRigidSensorInfo.h"
+#include "ntrt/sensors/tgCompoundRigidSensorInfo.h"
 // Other includes from NTRTsim
-#include "tgCompoundRigidSensor.h"
-#include "core/tgModel.h"
-#include "core/tgBaseRigid.h" // for checking descendants via casting.
-#include "core/tgSenseable.h"
-#include "core/tgCast.h"
+#include "ntrt/sensors/tgCompoundRigidSensor.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgBaseRigid.h" // for checking descendants via casting.
+#include "ntrt/core/tgSenseable.h"
+#include "ntrt/core/tgCast.h"
 // Other includes from the C++ standard library
 #include <stdexcept>
 #include <sstream> // for ease of converting tags to strings.

@@ -24,9 +24,9 @@
  * $Id$
  */
 
-#include "tgKinematicContactCableInfo.h"
+#include "ntrt/tgcreator/tgKinematicContactCableInfo.h"
 
-#include "core/tgBulletContactSpringCable.h"
+#include "ntrt/core/tgBulletContactSpringCable.h"
 
 tgKinematicContactCableInfo::tgKinematicContactCableInfo(const tgKinematicActuator::Config& config) : 
 m_config(config),

@@ -24,10 +24,10 @@
  */
 
 // This Module
-#include "tgBulletSpringCable.h"
-#include "tgBasicActuator.h"
-#include "tgModelVisitor.h"
-#include "tgWorld.h"
+#include "ntrt/core/tgBulletSpringCable.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgModelVisitor.h"
+#include "ntrt/core/tgWorld.h"
 // The Bullet Physics Library
 #include "LinearMath/btQuickprof.h"
 

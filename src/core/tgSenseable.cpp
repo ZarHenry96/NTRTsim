@@ -24,7 +24,7 @@
  */
 
 // This module
-#include "tgSenseable.h"
+#include "ntrt/core/tgSenseable.h"
 
 // From the C++ standard library:
 // ...

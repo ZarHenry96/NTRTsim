@@ -23,8 +23,8 @@
  */
 
 // This module
-#include "tgSpringCable.h"
-#include "tgSpringCableAnchor.h"
+#include "ntrt/core/tgSpringCable.h"
+#include "ntrt/core/tgSpringCableAnchor.h"
 
 #include <iostream>
 #include <stdexcept>

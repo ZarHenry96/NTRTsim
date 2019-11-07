@@ -24,8 +24,8 @@
  * $Id$
  */
 
-#include "tgNodes.h"
-#include "tgPair.h"
+#include "ntrt/tgcreator/tgNodes.h"
+#include "ntrt/tgcreator/tgPair.h"
 
 tgPair tgNodes::pair(int from, int to, std::string tags)
 {

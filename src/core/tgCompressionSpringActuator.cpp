@@ -25,10 +25,10 @@
  */
 
 // This Module
-#include "tgBulletCompressionSpring.h"
-#include "tgCompressionSpringActuator.h"
-#include "tgModelVisitor.h"
-#include "tgWorld.h"
+#include "ntrt/core/tgBulletCompressionSpring.h"
+#include "ntrt/core/tgCompressionSpringActuator.h"
+#include "ntrt/core/tgModelVisitor.h"
+#include "ntrt/core/tgWorld.h"
 // The Bullet Physics Library
 #include "LinearMath/btQuickprof.h"
 

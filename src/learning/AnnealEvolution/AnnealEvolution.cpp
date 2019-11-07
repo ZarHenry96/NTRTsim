@@ -25,10 +25,10 @@
  * $Id$
  */
  
-#include "AnnealEvolution.h"
-#include "learning/Configuration/configuration.h"
-#include "core/tgString.h"
-#include "helpers/FileHelpers.h"
+#include "ntrt/learning/AnnealEvolution.h"
+#include "ntrt/learning/Configuration/configuration.h"
+#include "ntrt/core/tgString.h"
+#include "ntrt/helpers/FileHelpers.h"
 #include <iostream>
 #include <numeric>
 #include <string>

@@ -24,13 +24,13 @@
  */
 
 // This module
-#include "tgSimulation.h"
+#include "ntrt/core/tgSimulation.h"
 // This application
-#include "tgModel.h"
-#include "tgSimView.h"
-#include "tgSimViewGraphics.h"
-#include "tgWorld.h"
-#include "sensors/tgDataManager.h" //for loggers etc.
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/sensors/tgDataManager.h" //for loggers etc.
 // The Bullet Physics Library
 #include "LinearMath/btQuickprof.h"
 

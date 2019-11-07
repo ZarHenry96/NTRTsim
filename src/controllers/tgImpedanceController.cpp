@@ -23,13 +23,13 @@
  */
 
 // This module
-#include "tgImpedanceController.h"
+#include "ntrt/controllers/tgImpedanceController.h"
 // This library
-#include "tgBasicController.h"
-#include "tgTensionController.h"
-#include "core/tgSpringCableActuator.h"
-#include "core/tgBasicActuator.h"
-#include "core/tgCast.h"
+#include "ntrt/controllers/tgBasicController.h"
+#include "ntrt/controllers/tgTensionController.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgCast.h"
 
 /**
  * The default value for Controller::tgImpedanceController::m_offsetTension

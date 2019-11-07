@@ -25,10 +25,10 @@
  */
 
 // This module
-#include "tgStructure.h"
+#include "ntrt/tgcreator/tgStructure.h"
 // This library
-#include "tgNode.h"
-#include "tgPair.h"
+#include "ntrt/tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgPair.h"
 // The Bullet Physics library
 #include <LinearMath/btQuaternion.h>
 #include <LinearMath/btVector3.h>

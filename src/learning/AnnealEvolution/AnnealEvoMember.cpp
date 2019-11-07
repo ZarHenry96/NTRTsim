@@ -25,7 +25,7 @@
  * $Id$
  */
 
-#include "AnnealEvoMember.h"
+#include "ntrt/learning/AnnealEvoMember.h"
 #include <fstream>
 #include <iostream>
 #include <assert.h>

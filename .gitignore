@@ -1,14 +1,11 @@
 env
 build
-build_test
-build_test_integration
-conf/*.conf
+build(s|S)
+external/conf/*.conf
 src/DoxyDocs
 
 .cproject
-
 .project
-
 .idea
 
 **/CMakeFiles
@@ -17,9 +14,10 @@ src/DoxyDocs
 *CMakeCache.txt
 **/Makefile
 **/cmake_install.cmake
+cmake-build-debug
+NTRTConfig.cmake
 
 *.pyc
-*.kdev4
 src/.settings/org.eclipse.cdt.codan.core.prefs
 
 *~

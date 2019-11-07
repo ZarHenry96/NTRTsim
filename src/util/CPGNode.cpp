@@ -24,7 +24,7 @@
  * $Id$
  */
 
-#include "CPGNode.h"
+#include "ntrt/util/CPGNode.h"
 //#include "CPGEdge.h"
 
 // The C++ Standard Library

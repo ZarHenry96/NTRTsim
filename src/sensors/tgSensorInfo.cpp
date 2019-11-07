@@ -25,8 +25,8 @@
  */
 
 // Includes from NTRT:
-#include "tgSensorInfo.h"
-#include "core/tgSenseable.h"
+#include "ntrt/sensors/tgSensorInfo.h"
+#include "ntrt/core/tgSenseable.h"
 
 // Includes from the c++ standard library:
 // ...

@@ -25,10 +25,10 @@
  */
 
 // This Module
-#include "tgRodInfo.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
 
 // The NTRT Core library
-#include "core/tgWorldBulletPhysicsImpl.h"
+#include "ntrt/core/tgWorldBulletPhysicsImpl.h"
 
 // The Bullet Physics Library
 #include "LinearMath/btVector3.h"

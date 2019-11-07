@@ -23,10 +23,10 @@
  */
 
 // This module
-#include "tgBulletUtil.h"
+#include "ntrt/core/tgBulletUtil.h"
 // This application
-#include "tgWorld.h"
-#include "tgWorldBulletPhysicsImpl.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/tgWorldBulletPhysicsImpl.h"
 // The Bullet Physics library
 #include "BulletCollision/CollisionShapes/btCollisionShape.h"
 #include "BulletDynamics/Dynamics/btDynamicsWorld.h"

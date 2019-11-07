@@ -6,9 +6,12 @@ project(Configuration)
 
 # Add a library with the same name as the project. The library will contain all of the 
 # files listed along with any files referenced by those files, so you usually only have
-# to include the 'main' files in this list. 
+# to include the 'main' files in this list.
+add_library(${PROJECT_NAME} configuration.cpp)
+add_library(ntrt::learning::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
-add_library( ${PROJECT_NAME} SHARED
-    configuration.cpp
+target_include_directories(${PROJECT_NAME} PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
 )
 

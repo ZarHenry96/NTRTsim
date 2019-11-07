@@ -23,10 +23,10 @@
  */
 
 // This module
-#include "tgModel.h"
+#include "ntrt/core/tgModel.h"
 // This application
-#include "tgModelVisitor.h"
-#include "abstractMarker.h"
+#include "ntrt/core/tgModelVisitor.h"
+#include "ntrt/core/abstractMarker.h"
 // The C++ Standard Library
 #include <stdexcept>
 

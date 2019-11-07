@@ -24,7 +24,7 @@
  * $Id$
  */
  
-#include "abstractMarker.h"
+#include "ntrt/core/abstractMarker.h"
 
 abstractMarker::abstractMarker(){
     // Supress compiler warning for bullet's unused variable

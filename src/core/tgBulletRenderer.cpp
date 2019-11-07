@@ -24,24 +24,23 @@
  */
 
 // This module
-#include "tgBulletRenderer.h"
+#include "ntrt/core/tgBulletRenderer.h"
 // This application
-#include "abstractMarker.h"
-#include "tgSpringCable.h"
-#include "tgBulletCompressionSpring.h"
-#include "tgSpringCableAnchor.h"
-#include "tgBulletUtil.h"
-#include "tgSpringCableActuator.h"
-#include "tgCompressionSpringActuator.h"
-#include "tgWorld.h"
-#include "tgWorldBulletPhysicsImpl.h"
-
-#include "tgCast.h"
+#include "ntrt/core/abstractMarker.h"
+#include "ntrt/core/tgSpringCable.h"
+#include "ntrt/core/tgBulletCompressionSpring.h"
+#include "ntrt/core/tgSpringCableAnchor.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgCompressionSpringActuator.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/tgWorldBulletPhysicsImpl.h"
+#include "ntrt/core/tgCast.h"
 
 #include "LinearMath/btQuickprof.h"
 
 // OpenGL_FreeGlut (patched Bullet)
-#include "tgGLDebugDrawer.h"
+#include "ntrt/tgOpenGLSupport/tgOpenGLBase/tgGLDebugDrawer.h"
 // The Bullet Physics library
 #include "BulletSoftBody/btSoftRigidDynamicsWorld.h"
 // The C++ Standard Library

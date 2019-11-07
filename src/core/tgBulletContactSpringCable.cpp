@@ -25,15 +25,15 @@
  */
 
 // This object
-#include "tgBulletContactSpringCable.h"
+#include "ntrt/core/tgBulletContactSpringCable.h"
 
 // NTRT
-#include "tgcreator/tgUtil.h"
-#include "core/tgBulletSpringCableAnchor.h"
-#include "core/tgCast.h"
-#include "core/tgBulletUtil.h"
-#include "core/tgWorld.h"
-#include "core/tgWorldBulletPhysicsImpl.h"
+#include "ntrt/tgcreator/tgUtil.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/tgWorldBulletPhysicsImpl.h"
 
 // The Bullet Physics library
 #include "btBulletDynamicsCommon.h"

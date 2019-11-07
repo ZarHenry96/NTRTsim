@@ -24,12 +24,12 @@
  */
 
 // This module
-#include "tgRodSensorInfo.h"
+#include "ntrt/sensors/tgRodSensorInfo.h"
 // Other includes from NTRTsim
-#include "tgRodSensor.h"
-#include "core/tgRod.h"
-#include "core/tgSenseable.h"
-#include "core/tgCast.h"
+#include "ntrt/sensors/tgRodSensor.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/core/tgSenseable.h"
+#include "ntrt/core/tgCast.h"
 // Other includes from the C++ standard library
 #include <stdexcept>
 

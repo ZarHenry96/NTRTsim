@@ -24,10 +24,10 @@
  */
 
 // This module
-#include "tgWorld.h"
+#include "ntrt/core/tgWorld.h"
 // This application
-#include "tgWorldBulletPhysicsImpl.h"
-#include "terrain/tgBoxGround.h"
+#include "ntrt/core/tgWorldBulletPhysicsImpl.h"
+#include "ntrt/core/terrain/tgBoxGround.h"
 // The C++ Standard Library
 #include <cassert>
 #include <stdexcept>

@@ -25,12 +25,12 @@
  */
 
 // This module
-#include "tgWorldBulletPhysicsImpl.h"
+#include "ntrt/core/tgWorldBulletPhysicsImpl.h"
 // This application
-#include "tgWorld.h"
-#include "tgCast.h"
-#include "terrain/tgBulletGround.h"
-#include "terrain/tgEmptyGround.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/terrain/tgBulletGround.h"
+#include "ntrt/core/terrain/tgEmptyGround.h"
 // The Bullet Physics library
 #include "BulletCollision/BroadphaseCollision/btBroadphaseInterface.h"
 #include "BulletCollision/BroadphaseCollision/btDbvtBroadphase.h"

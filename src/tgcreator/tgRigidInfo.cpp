@@ -24,18 +24,18 @@
  */
 
 // This module
-#include "tgRigidInfo.h"
+#include "ntrt/tgcreator/tgRigidInfo.h"
 // This application
-#include "tgNode.h"
-#include "tgNodes.h"
-#include "tgPair.h"
-#include "tgPairs.h"
+#include "ntrt/tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgNodes.h"
+#include "ntrt/tgcreator/tgPair.h"
+#include "ntrt/tgcreator/tgPairs.h"
+#include "ntrt/tgcreator/tgUtil.h"
 // The NTRT Core Libary
-#include "core/tgBulletUtil.h"
-#include "core/tgTagSearch.h"
-#include "tgUtil.h"
-#include "core/tgBulletUtil.h"
-#include "core/tgWorld.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgTagSearch.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgWorld.h"
 
 
 // The Bullet Physics library

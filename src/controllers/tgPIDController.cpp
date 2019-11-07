@@ -25,9 +25,8 @@
  */
 
 
-#include "tgPIDController.h"
-
-#include "core/tgControllable.h"
+#include "nrtr/controllers/tgPIDController.h"
+#include "ntrt/core/tgControllable.h"
 
 // The C++ Standard Library
 #include <stdexcept>

@@ -1,31 +1,36 @@
 project(sensors)
 
+add_library(${PROJECT_NAME}
+        # Older software
+        tgDataLogger.cpp
+        tgDataObserver.cpp
+        # For the new sensors
+        tgDataManager.cpp
+        tgDataLogger2.cpp
 
-link_directories(${LIB_DIR})
+        tgSensor.cpp
+        tgRodSensor.cpp
+        tgSpringCableActuatorSensor.cpp
+        tgCompoundRigidSensor.cpp
+        tgSensorInfo.cpp
+        tgRodSensorInfo.cpp
+        tgSpringCableActuatorSensorInfo.cpp
+        tgCompoundRigidSensorInfo.cpp
+)
+add_library(ntrt::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
+target_include_directories(${PROJECT_NAME} PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        ${Boost_INCLUDE_DIRS}
+        ${BULLET_INCLUDE_DIRS}
+)
 # Note that we need to compile in support for boost's regex library
 # for use in tgCompoundRigidSensor and its info class.
-link_libraries(util core tgOpenGLSupport boost_regex)
-
-add_library( ${PROJECT_NAME} SHARED
-  # Older software
-  tgDataLogger.cpp
-  tgDataObserver.cpp
-
-  # For the new sensors
-  tgDataManager.cpp
-  tgDataLogger2.cpp
-    
-  tgSensor.cpp
-  tgRodSensor.cpp
-  tgSpringCableActuatorSensor.cpp
-  tgCompoundRigidSensor.cpp
-  
-  tgSensorInfo.cpp
-  tgRodSensorInfo.cpp
-  tgSpringCableActuatorSensorInfo.cpp
-  tgCompoundRigidSensorInfo.cpp
+target_link_libraries(${PROJECT_NAME} PRIVATE
+        ntrt::tgOpenGLSupport
+        ntrt::core
+        ntrt::util
+        boost_regex
+        LinearMath
 )
-
-
-  

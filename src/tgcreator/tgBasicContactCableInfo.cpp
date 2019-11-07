@@ -24,15 +24,12 @@
  * $Id$
  */
 
-#include "tgBasicContactCableInfo.h"
+#include "ntrt/tgcreator/tgBasicContactCableInfo.h"
+#include "ntrt/tgcreator/tgNode.h"
 
-#include "core/tgBulletContactSpringCable.h"
-
-#include "core/tgBulletUtil.h"
-#include "core/tgBulletSpringCableAnchor.h"
-
-#include "tgcreator/tgNode.h"
-
+#include "ntrt/core/tgBulletContactSpringCable.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
 
 // The Bullet Physics Library
 #include "btBulletDynamicsCommon.h"

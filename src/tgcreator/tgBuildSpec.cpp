@@ -24,13 +24,13 @@
  * $Id$
  */
 
-#include "tgBuildSpec.h"
-#include "tgRigidInfo.h"
-#include "tgConnectorInfo.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgRigidInfo.h"
+#include "ntrt/tgcreator/tgConnectorInfo.h"
 
-#include "core/tgException.h"
-#include "core/tgTags.h"
-#include "core/tgTagSearch.h"
+#include "ntrt/core/tgException.h"
+#include "ntrt/core/tgTags.h"
+#include "ntrt/core/tgTagSearch.h"
 
 tgBuildSpec::RigidAgent::~RigidAgent()  
 {

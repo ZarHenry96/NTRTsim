@@ -24,10 +24,10 @@
  * $Id$
  */
 
-#include "tgBasicActuatorInfo.h"
+#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
 
-#include "core/tgBulletSpringCable.h"
-#include "core/tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgBulletSpringCable.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
 
 tgBasicActuatorInfo::tgBasicActuatorInfo(const tgBasicActuator::Config& config) : 
 m_config(config),

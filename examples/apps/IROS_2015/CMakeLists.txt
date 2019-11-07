@@ -1,0 +1,4 @@
+Project(IROS_2015)
+
+add_subdirectory(TetraSpineStatic)
+add_subdirectory(hardwareSineWaves)

@@ -29,9 +29,9 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "AnnealAdapter.h"
-#include "learning/Configuration/configuration.h"
-#include "helpers/FileHelpers.h"
+#include "ntrt/learning/AnnealAdapter.h"
+#include "ntrt/learning/Configuration/configuration.h"
+#include "ntrt/helpers/FileHelpers.h"
 
 using namespace std;
 
