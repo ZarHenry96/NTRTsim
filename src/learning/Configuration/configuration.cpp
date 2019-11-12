@@ -28,7 +28,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "ntrt/learning/configuration.h"
+#include "ntrt/learning/Configuration/configuration.h"
 
 using namespace std;
 

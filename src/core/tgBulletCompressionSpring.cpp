@@ -107,7 +107,6 @@ tgBulletCompressionSpring::~tgBulletCompressionSpring()
     {
         delete m_anchors[i];
     }
-
     
     m_anchors.clear();
 }

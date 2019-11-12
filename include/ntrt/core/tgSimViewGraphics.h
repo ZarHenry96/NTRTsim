@@ -142,7 +142,7 @@ public:
     virtual void clientResetScene();
 
 private:    
-    tgGLDebugDrawer*    gDebugDrawer;   
+    tgGLDebugDrawer*    gDebugDrawer;
 };
 
 

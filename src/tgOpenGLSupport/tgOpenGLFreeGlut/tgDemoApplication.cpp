@@ -45,10 +45,17 @@ btCollisionShape* gShapePtr[maxNumObjects];//1 rigidbody has 1 shape (no re-use 
 extern int gNumClampedCcdMotions;
 
 #ifdef SHOW_NUM_DEEP_PENETRATIONS 
-extern int gNumDeepPenetrationChecks;
+
+// ------------------------------------------- //
+// the following two variables are not used anymore
+// neither in the project nor in Bullet Physics library
+// extern int gNumDeepPenetrationChecks;
+int gNumDeepPenetrationChecks = 0;
+// extern int gNumGjkChecks;
+int gNumGjkChecks = 0;
+// ------------------------------------------- //
 
 extern int gNumSplitImpulseRecoveries;
-extern int gNumGjkChecks;
 extern int gNumAlignedAllocs;
 extern int gNumAlignedFree;
 extern int gTotalBytesAlignedAllocs;

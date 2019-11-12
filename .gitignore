@@ -8,6 +8,7 @@ src/DoxyDocs
 .project
 .idea
 
+# CMake related files
 **/CMakeFiles
 *Makefile
 *cmake_install.cmake
@@ -15,10 +16,13 @@ src/DoxyDocs
 **/Makefile
 **/cmake_install.cmake
 cmake-build-debug
+
+# other CMake generated files
+include/**/resources.h
 NTRTConfig.cmake
 
+# Python compile bytecode
 *.pyc
-src/.settings/org.eclipse.cdt.codan.core.prefs
 
 *~
 *#

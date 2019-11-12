@@ -25,7 +25,7 @@
  * $Id$
  */
  
-#include "ntrt/learning/AnnealEvolution.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
 #include "ntrt/learning/Configuration/configuration.h"
 #include "ntrt/core/tgString.h"
 #include "ntrt/helpers/FileHelpers.h"

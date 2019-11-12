@@ -1,5 +1,9 @@
 project(obstacles)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(BULLET_COLLISION_LIB BulletCollision)
+find_library(BULLET_DYN_LIB BulletDynamics)
+
 add_library(${PROJECT_NAME}
 		tgBlockField.cpp
 		tgStairs.cpp
@@ -19,7 +23,9 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 		ntrt::core
         ntrt::core::terrain
         ntrt::tgOpenGLSupport
-		LinearMath
+		${LINEAR_MATH_LIB}
+		${BULLET_COLLISION_LIB}
+		${BULLET_DYN_LIB}
 )
 
 add_executable(AppObstacleTest
@@ -32,10 +38,13 @@ target_include_directories(AppObstacleTest PUBLIC
 		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
 		${BULLET_INCLUDE_DIRS}
 )
+
 target_link_libraries(AppObstacleTest PRIVATE
 		ntrt::tgcreator
 		ntrt::core
 		ntrt::core::terrain
 		ntrt::tgOpenGLSupport
-		LinearMath
+		${LINEAR_MATH_LIB}
+		${BULLET_COLLISION_LIB}
+		${BULLET_DYN_LIB}
 )

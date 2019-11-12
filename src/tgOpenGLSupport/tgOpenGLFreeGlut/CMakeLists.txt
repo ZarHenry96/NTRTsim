@@ -4,7 +4,13 @@ project(tgOpenGLFreeGlut)
 #${BULLET_PHYSICS_SOURCE_DIR}/src ${BULLET_PHYSICS_SOURCE_DIR}/Extras/ConvexHull
 #${BULLET_PHYSICS_SOURCE_DIR}/Demos/OpenGL
 #)
-                
+find_library(GLU_LIB GLU)
+find_library(GLUT_LIB glut)
+find_library(OPENGL_LIB OpenGL)
+find_library(LINEAR_MAT_LIB LinearMath)
+find_library(BULLET_DYN_LIB BulletDynamics)
+find_library(BULLET_COLLISION_LIB BulletCollision)
+
 add_library(${PROJECT_NAME}
         tgDemoApplication.cpp
         tgGlutDemoApplication.cpp
@@ -16,12 +22,18 @@ add_library(ntrt::tgOpenGLSupport::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        ${BULLET_INCLUDE_DIRS}
+        ${OPENGL_INCLUDE_DIR}
+        ${OPENGL_EGL_INCLUDE_DIRS}
+        ${GLUT_INCLUDE_DIR}
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE
-        OpenGL
-        GLUT
-        BulletDynamics
-        BulletCollision
+        ${OPENGL_LIB}
+        ${GLUT_LIB}
+        ${GLU_LIB}
+        ${LINEAR_MATH_LIB}
+        ${BULLET_DYN_LIB}
+        ${BULLET_COLLISION_LIB}
         ntrt::tgOpenGLSupport::tgOpenGLBase
 )
 

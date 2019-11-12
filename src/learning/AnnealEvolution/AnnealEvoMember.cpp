@@ -25,11 +25,12 @@
  * $Id$
  */
 
-#include "ntrt/learning/AnnealEvoMember.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvoMember.h"
 #include <fstream>
 #include <iostream>
-#include <assert.h>
+#include <cassert>
 #include <stdexcept>
+#include <random>
 
 using namespace std;
 
@@ -39,10 +40,14 @@ AnnealEvoMember::AnnealEvoMember(configuration config)
     this->numOutputs=config.getintvalue("numberOfActions");
     this->devBase=config.getDoubleValue("deviation");
     this->monteCarlo=config.getintvalue("MonteCarlo");
-    
+
+    std::random_device rd;
+    gen.seed(rd());
+
     statelessParameters.resize(numOutputs);
-    for(int i=0;i<numOutputs;i++)
-        statelessParameters[i]=rand()*1.0/RAND_MAX;
+    for(int i = 0; i < numOutputs; i++) {
+        statelessParameters[i] = uniform_dist(gen);
+    }
 
     maxScore=-1000;
 }
@@ -108,26 +113,16 @@ void AnnealEvoMember::saveToFile(const char * outputFilename)
 
 void AnnealEvoMember::loadFromFile(const char * outputFilename)
 {
-    //cout<<"loading parameters from file "<<outputFilename<<endl;
     ifstream ss(outputFilename);
-    int i=0;
+    int i = 0;
     string value;
-#if (0)
-    // Disable definition of unused variable to suppress compiler warning
-    double valueDbl;
-#endif
+
 	if(ss.is_open())
 	{
-		while(!ss.eof())
+		while(getline(ss, value))
 		{
-			//cout<<"success opening file"<<endl;
-			// @todo fix the infinite loop that occurs here!
-			if(getline ( ss, value, ',' )>0)
-			{
-				//cout<<"value read as string: "<<value<<endl;
-				statelessParameters[i++]=atof(value.c_str());
-				//cout<<statelessParameters[i-1]<<",";
-			}
+            statelessParameters[i] = atof(value.c_str());
+            i++;
 		}
 	}
 	else
@@ -136,8 +131,6 @@ void AnnealEvoMember::loadFromFile(const char * outputFilename)
 		cout << "Try turning learning on in config.ini to generate parameters" << std::endl;
 		throw std::invalid_argument("Parameter file does not exist");
 	}
-    //cout<<"reading complete"<<endl;
-    //cout<<endl;
     ss.close();
 
 }

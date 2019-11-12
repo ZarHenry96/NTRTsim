@@ -3,9 +3,7 @@
 #include "ntrt/tgOpenGLSupport/tgOpenGLBase/GLDebugFont.h"
 #include "ntrt/tgOpenGLSupport/tgOpenGLFreeGlut/tgGlutStuff.h"
 
-
-
-#include <stdio.h> //printf debugging
+#include <cstdio> //printf debugging
 tgGLDebugDrawer::tgGLDebugDrawer()
 :m_debugMode(0)
 {

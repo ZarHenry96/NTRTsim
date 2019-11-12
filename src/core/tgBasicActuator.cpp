@@ -162,9 +162,8 @@ void tgBasicActuator::setControlInput(double input, double dt)
         moveMotors(dt);
     }
 
-    // Postcondition
+    // Post-condition
     assert(invariant());
-    
 }
 
 void tgBasicActuator::moveMotors(double dt)

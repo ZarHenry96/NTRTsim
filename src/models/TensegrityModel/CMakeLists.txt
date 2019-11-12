@@ -1,5 +1,11 @@
 project(TensegrityModel)
 
+find_library(LINEAR_MAT_LIB LinearMath)
+find_library(YAML_CPP_LIB yaml-cpp)
+find_library(BULLET_DYN_LIB BulletDynamics)
+find_library(OPENGL_LIB OpenGL)
+find_library(GLUT_LIB glut)
+
 add_library(TensegrityModel SHARED
         TensegrityModel.cpp
         TensegrityModelController.cpp
@@ -19,8 +25,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::sensors
         ntrt::core::terrain
         ntrt::tgOpenGLSupport
-        yaml-cpp
-        LinearMath
+        ${YAML_CPP_LIB}
+        ${LinearMath}
 )
 
 add_executable(BuildModel
@@ -35,12 +41,14 @@ target_include_directories(BuildModel PUBLIC
         ${YAML_CPP_INCLUDE_DIR}
 )
 target_link_libraries(BuildModel PRIVATE
+        ${OPENGL_LIB}
+        ${GLUT_LIB}
+        ${YAML_CPP_LIB}
+        ${LinearMath}
         ntrt::core
         ntrt::tgcreator
         ntrt::util
         ntrt::sensors
         ntrt::core::terrain
         ntrt::tgOpenGLSupport
-        yaml-cpp
-        LinearMath
 )

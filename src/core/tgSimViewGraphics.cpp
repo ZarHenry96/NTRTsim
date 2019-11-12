@@ -29,7 +29,7 @@
 #include "ntrt/core/tgBulletUtil.h"
 #include "ntrt/core/tgSimulation.h"
 // Bullet OpenGL_FreeGlut (patched files)
-#include "ntrt/tgOpenGLSupport/tgOpengGLFreeGlut/tgGLDebugDrawer.h"
+#include "ntrt/tgOpenGLSupport/tgOpenGLFreeGlut/tgGLDebugDrawer.h"
 // The Bullet Physics library
 #include "BulletSoftBody/btSoftRigidDynamicsWorld.h"
 

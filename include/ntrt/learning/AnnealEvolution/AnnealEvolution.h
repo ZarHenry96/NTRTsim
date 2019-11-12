@@ -28,8 +28,8 @@
  * $Id$
  */
 
-#include "ntrt/learning/AnnealEvoPopulation.h"
-#include "ntrt/learning/AnnealEvoMember.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvoPopulation.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvoMember.h"
 #include <fstream>
 #include <boost/iterator/iterator_concepts.hpp>
 

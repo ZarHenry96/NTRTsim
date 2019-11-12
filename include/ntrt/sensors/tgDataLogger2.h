@@ -27,7 +27,7 @@
  */
 
 // Includes from NTRTsim
-#include "ntrt/tgDataManager.h"
+#include "ntrt/sensors/tgDataManager.h"
 // Includes from the C++ standard library
 #include <fstream> // for writing to a file
 

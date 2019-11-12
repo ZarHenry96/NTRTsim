@@ -506,7 +506,7 @@ void TensegrityModel::parseAttachmentPoint(tgStructure& structure, const std::st
         tgNode* attachmentNode1 = &(getNode(structure, attachmentNode1Path));
         tgNode* attachmentNode2 = &(getNode(structure, attachmentNode2Path));
 
-        receptors.push_back(std::make_pair(attachmentNode1, attachmentNode2));
+        receptors.emplace_back(attachmentNode1, attachmentNode2);
         refNodes.push_back((*attachmentNode1 + *attachmentNode2) / 2);
     }
 }

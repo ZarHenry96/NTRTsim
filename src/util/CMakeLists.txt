@@ -1,5 +1,7 @@
 project(util)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+
 add_library(${PROJECT_NAME}
 		CPGNode.cpp
 		CPGEquations.cpp
@@ -18,7 +20,5 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 target_link_libraries(${PROJECT_NAME} PRIVATE
 		ntrt::controllers
 		ntrt::core
-		LinearMath
-		boost
+		${LINEAR_MATH_LIB}
 )
-

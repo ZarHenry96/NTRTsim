@@ -31,6 +31,10 @@
 #include "LinearMath/btScalar.h"
 #include "LinearMath/btVector3.h"
 
+#include "BulletCollision/CollisionShapes/btCollisionShape.h"
+#include "BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h"
+#include "BulletDynamics/Dynamics/btRigidBody.h"
+
 // std::size_t
 #include <cstddef>
 

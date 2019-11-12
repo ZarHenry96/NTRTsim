@@ -32,6 +32,7 @@
 #include <vector>
 #include <tr1/random>
 #include "ntrt/learning/Configuration/configuration.h"
+#include <random>
 
 
 class AnnealEvoMember
@@ -57,6 +58,9 @@ private:
     int numOutputs;
     double devBase;
     bool monteCarlo;
+
+    std::mt19937_64 gen;
+    std::uniform_real_distribution<double> uniform_dist {0.0, 1.0};
 };
 
 

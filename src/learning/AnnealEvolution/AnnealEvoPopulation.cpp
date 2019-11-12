@@ -25,7 +25,7 @@
  * $Id$
  */
 
-#include "ntrt/learning/AnnealEvoPopulation.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvoPopulation.h"
 #include <string>
 #include <vector>
 #include <iostream>

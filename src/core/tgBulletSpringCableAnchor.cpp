@@ -221,7 +221,7 @@ bool tgBulletSpringCableAnchor::updateManifold(btPersistentManifold* m)
 	// Does the new manifold actually affect the attached body
 	if (m && (m->getBody0() == attachedBody || m->getBody1() == attachedBody ))
 	{
-		std::pair<btScalar, btVector3> manifoldValues = getManifoldDistance(m);
+		auto manifoldValues = getManifoldDistance(m);
 		btScalar newDist = manifoldValues.first;
 		// If the original manifold is NULL, just use the new one
 		if (!manifold)
@@ -329,6 +329,6 @@ std::pair<btScalar, btVector3> tgBulletSpringCableAnchor::getManifoldDistance(bt
             }
         }
     }
-	
-	return std::make_pair<btScalar, btVector3> (length, newNormal);
+
+	return std::pair(length, newNormal);
 }

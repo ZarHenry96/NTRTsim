@@ -40,7 +40,7 @@
 #include "LinearMath/btQuickprof.h"
 
 // OpenGL_FreeGlut (patched Bullet)
-#include "ntrt/tgOpenGLSupport/tgOpenGLBase/tgGLDebugDrawer.h"
+#include "ntrt/tgOpenGLSupport/tgOpenGLFreeGlut/tgGLDebugDrawer.h"
 // The Bullet Physics library
 #include "BulletSoftBody/btSoftRigidDynamicsWorld.h"
 // The C++ Standard Library

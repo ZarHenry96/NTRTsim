@@ -79,7 +79,7 @@ public:
     virtual void setRestLength( const double newRestLength); 
     
     /**
-     * Pure virtual funciton, returns the actual length of the spring
+     * Pure virtual function, returns the actual length of the spring
      * cable
      */
     virtual const double getActualLength() const = 0;

@@ -26,7 +26,7 @@
 #include <fstream>
 #include <sstream>
 #include "ntrt/helpers/FileHelpers.h"
-#include "resources.h"
+#include "ntrt/helpers/resources.h"
 
 using namespace std;
 

@@ -29,7 +29,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "ntrt/learning/AnnealAdapter.h"
+#include "ntrt/learning/Adapters/AnnealAdapter.h"
 #include "ntrt/learning/Configuration/configuration.h"
 #include "ntrt/helpers/FileHelpers.h"
 

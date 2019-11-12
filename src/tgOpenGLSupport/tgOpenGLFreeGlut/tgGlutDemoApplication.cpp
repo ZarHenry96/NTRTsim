@@ -2,7 +2,6 @@
 #ifndef _WINDOWS
 
 #include "ntrt/tgOpenGLSupport/tgOpenGLFreeGlut/tgGlutDemoApplication.h"
-
 #include "ntrt/tgOpenGLSupport/tgOpenGLFreeGlut/tgGlutStuff.h"
 
 #include "BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h"

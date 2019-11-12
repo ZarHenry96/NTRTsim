@@ -1,5 +1,8 @@
 project(sensors)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(BOOST_REGEX_LIB boost_regex)
+
 add_library(${PROJECT_NAME}
         # Older software
         tgDataLogger.cpp
@@ -25,12 +28,13 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${Boost_INCLUDE_DIRS}
         ${BULLET_INCLUDE_DIRS}
 )
+
 # Note that we need to compile in support for boost's regex library
 # for use in tgCompoundRigidSensor and its info class.
 target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::tgOpenGLSupport
         ntrt::core
         ntrt::util
-        boost_regex
-        LinearMath
+        ${BOOST_REGEX_LIB}
+        ${LINEAR_MATH_LIB}
 )

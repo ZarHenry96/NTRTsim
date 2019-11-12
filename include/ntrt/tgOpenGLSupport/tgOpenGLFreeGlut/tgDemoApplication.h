@@ -20,9 +20,9 @@ subject to the following restrictions:
 #include "ntrt/tgOpenGLSupport/tgOpenGLFreeGlut/tgGlutStuff.h"
 #include "ntrt/tgOpenGLSupport/tgOpenGLBase/GL_ShapeDrawer.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
+#include <cstdlib>
+#include <cstdio>
+#include <cmath>
 
 
 #include "LinearMath/btVector3.h"
@@ -30,6 +30,7 @@ subject to the following restrictions:
 #include "LinearMath/btTransform.h"
 #include "LinearMath/btQuickprof.h"
 #include "LinearMath/btAlignedObjectArray.h"
+#include "LinearMath/btAlignedAllocator.h"
 
 class	btCollisionShape;
 class	btDynamicsWorld;

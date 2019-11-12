@@ -1,5 +1,8 @@
 project(terrain)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(BULLET_COLLISION_LIB BulletCollision)
+
 add_library(${PROJECT_NAME}
         tgBulletGround.cpp
         tgBoxGround.cpp
@@ -16,6 +19,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE
-        BulletCollision
-        LinearMath
+        ${LINEAR_MATH_LIB}
+        ${BULLET_COLLISION_LIB}
 )

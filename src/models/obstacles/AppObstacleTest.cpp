@@ -60,17 +60,17 @@ int main(int argc, char** argv)
 	tgBoxGround* ground = new tgBoxGround(groundConfig);
 
     btVector3 eulerAngles = btVector3(0.0, 0.0, 0.0);
-   btScalar friction = 0.5;
-   btScalar restitution = 0.0;
-   // Size doesn't affect hilly terrain
-   btVector3 size = btVector3(0.0, 0.1, 0.0);
-   btVector3 origin = btVector3(0.0, 0.0, 0.0);
-   size_t nx = 100;
-   size_t ny = 100;
-   double margin = 0.5;
-   double triangleSize = 5.0;
-   double waveHeight = 3.0;
-   double offset = 0.0;
+    btScalar friction = 0.5;
+    btScalar restitution = 0.0;
+    // Size doesn't affect hilly terrain
+    btVector3 size = btVector3(0.0, 0.1, 0.0);
+    btVector3 origin = btVector3(0.0, 0.0, 0.0);
+    size_t nx = 100;
+    size_t ny = 100;
+    double margin = 0.5;
+    double triangleSize = 5.0;
+    double waveHeight = 3.0;
+    double offset = 0.0;
     tgHillyGround::Config hillGroundConfig(eulerAngles, friction, restitution,
                                     size, origin, nx, ny, margin, triangleSize,
                                     waveHeight, offset);

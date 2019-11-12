@@ -1,5 +1,11 @@
 project(tgcreator)
 
+find_library(BOOST_RANDOM_LIB boost_random)
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(BULLET_COLLISION_LIB BulletCollision)
+find_library(BULLET_DYN_LIB BulletDynamics)
+find_library(BULLET_SOFT_BODY_LIB BulletSoftBody)
+
 add_library(${PROJECT_NAME}
         tgNodes.cpp
         tgRigidInfo.cpp
@@ -30,13 +36,14 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${Boost_INCLUDE_DIRS}
         ${BULLET_INCLUDE_DIRS}
 )
+
 # Needed to add boost's random library for tgRigidAutoCompound's hashing function
 target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::core
         ntrt::tgOpenGLSupport
-        boost_random
-        LinearMath
-        BulletCollision
-        BulletDynamics
-        BulletSoftBody
+        ${BOOST_RANDOM_LIB}
+        ${LINEAR_MATH_LIB}
+        ${BULLET_COLLISION_LIB}
+        ${BULLET_DYN_LIB}
+        ${BULLET_SOFT_BODY_LIB}
 )

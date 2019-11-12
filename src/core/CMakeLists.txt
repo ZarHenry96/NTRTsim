@@ -3,6 +3,11 @@ project(core)
 
 add_subdirectory(terrain)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(BULLET_COLLISION_LIB BulletCollision)
+find_library(BULLET_DYN_LIB BulletDynamics)
+find_library(BULLET_SOTF_BO_LIB BulletSoftBody)
+
 add_library(${PROJECT_NAME}
         tgWorldBulletPhysicsImpl.cpp
         tgBulletSpringCableAnchor.cpp
@@ -41,8 +46,9 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::${PROJECT_NAME}::terrain
         ntrt::tgOpenGLSupport
-        LinearMath
-        BulletDynamics
-        BulletCollision
-        BulletSoftBody
+        ${LINEAR_MATH_LIB}
+        ${BULLET_DYN_LIB}
+        ${BULLET_COLLISION_LIB}
+        ${BULLET_SOTF_BO_LIB}
+
 )

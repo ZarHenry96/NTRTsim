@@ -30,7 +30,6 @@
 #include "BulletCollision/CollisionShapes/btBoxShape.h"
 #include "BulletCollision/CollisionShapes/btTriangleIndexVertexArray.h"
 #include "BulletCollision/CollisionShapes/btBvhTriangleMeshShape.h"
-#include "BulletDynamics/Dynamics/btRigidBody.h"
 #include "LinearMath/btDefaultMotionState.h"
 #include "LinearMath/btTransform.h"
 
@@ -159,7 +158,8 @@ btCollisionShape* tgHillyGround::hillyCollisionShape() {
     return pShape; 
 }
 
-btTriangleIndexVertexArray *tgHillyGround::createMesh(std::size_t triangleCount, int indices[], std::size_t vertexCount, btVector3 vertices[]) {
+btTriangleIndexVertexArray *tgHillyGround::createMesh(std::size_t triangleCount, int indices[],
+        std::size_t vertexCount, btVector3 vertices[]) {
     const int vertexStride = sizeof(btVector3);
     const int indexStride = 3 * sizeof(int);
 

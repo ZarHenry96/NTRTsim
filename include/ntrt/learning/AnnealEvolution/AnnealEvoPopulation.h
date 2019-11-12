@@ -28,7 +28,7 @@
  * $Id$
  */
 
-#include "ntrt/learning/AnnealEvoMember.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvoMember.h"
 #include <vector>
 
 class AnnealEvoPopulation {

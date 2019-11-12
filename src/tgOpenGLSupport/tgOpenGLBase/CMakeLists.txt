@@ -3,6 +3,12 @@ project(tgOpenGLBase)
 #INCLUDE_DIRECTORIES(
 #${BULLET_PHYSICS_SOURCE_DIR}/src ${BULLET_PHYSICS_SOURCE_DIR}/Extras/ConvexHull
 #)
+find_library(GLU_LIB GLU)
+find_library(GLUT_LIB glut)
+find_library(OPENGL_LIB OpenGL)
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(BULLET_DYN_LIB BulletDynamics)
+find_library(BULLET_COLLISION_LIB BulletCollision)
 
 add_library(${PROJECT_NAME}
 		GLDebugFont.cpp
@@ -28,11 +34,12 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 		${GLUT_INCLUDE_DIR}
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE
-		OpenGL
-		GLUT
-		LinearMath
-		BulletDynamics
-		BulletCollision
+		${OPENGL_LIB}
+		${GLUT_LIB}
+		${GLU_LIB}
+		${LINEAR_MATH_LIB}
+		${BULLET_DYN_LIB}
+		${BULLET_COLLISION_LIB}
 )
 
 #IF (BUILD_SHARED_LIBS)

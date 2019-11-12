@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.15)
+
+cmake_policy(SET CMP0083 NEW)
 
 project(NTRT
         VERSION 1.1
@@ -10,14 +12,23 @@ option(BUILD_DOC "Enable building library documentation" OFF)
 option(BUILD_EXAMPLES "Enable building library examples" OFF)
 option(BUILD_TESTING "Enable building the tests" OFF)
 option(BUILD_SHARED_LIBS "Enable building all the library as shared" OFF)
+option(USE_DOUBLE_PRECISION "Enable Bullet Physic library to use double precision" ON)
+
+if(USE_DOUBLE_PRECISION)
+    message("-- Exploit double precision")
+    add_compile_definitions(BT_USE_DOUBLE_PRECISION)
+endif()
 
 # Only do these if this is the main project, and not if it is included through add_subdirectory
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
     # Optionally set things like CMAKE_CXX_STANDARD, CMAKE_POSITION_INDEPENDENT_CODE here
-#    set(CMAKE_CXX_STANDARD 11)
-#    set(CMAKE_CXX_STANDARD_REQUIRED ON)
+    set(CMAKE_CXX_STANDARD 17)
+    set(CMAKE_CXX_STANDARD_REQUIRED ON)
     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+    include(CheckPIESupported)
+    check_pie_supported()
 
     # Let's ensure -std=c++xx instead of -std=g++xx
     set(CMAKE_CXX_EXTENSIONS OFF)
@@ -55,16 +66,17 @@ endif()
 
 # in addition to the default installation path, add two more paths
 # where required libraries can be found on the system
-list(APPEND CMAKE_PREFIX_PATH /usr/local/include ${PROJECT_SOURCE_DIR}/external/env)
+list(APPEND CMAKE_PREFIX_PATH /usr/local/include ${CMAKE_SOURCE_DIR}/external/env)
 
 # load required libraries
-find_package(Boost 1.71 REQUIRED)
+find_package(Boost 1.71 REQUIRED COMPONENTS regex random)
 find_package(Bullet 2.88 REQUIRED)
 find_package(jsoncpp 1.9.0 REQUIRED)
 find_package(yaml-cpp 0.6.3 REQUIRED)
 find_package(GTest 1.10.0 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
+find_library(GLU REQUIRED)
 
 find_package(PkgConfig REQUIRED)
 pkg_search_module(GLIB REQUIRED glib-2.0)

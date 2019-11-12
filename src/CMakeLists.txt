@@ -14,6 +14,7 @@ add_library(ntrt
         controllers
         helpers
         util
+        sensors
         tgcreator
         models
         learning
