@@ -2,14 +2,14 @@ cmake_minimum_required(VERSION 3.15)
 
 cmake_policy(SET CMP0083 NEW)
 
-project(NTRT
+project(ntrt
         VERSION 1.1
         DESCRIPTION "NTRT NASA Tensegrity_Robotics_Toolkit - A collection of software modules for the modeling,\
                     simulation, and control of Tensegrity Robots"
         LANGUAGES CXX)
 
 option(BUILD_DOC "Enable building library documentation" OFF)
-option(BUILD_EXAMPLES "Enable building library examples" OFF)
+option(BUILD_EXAMPLES "Enable building library examples" ON)
 option(BUILD_TESTING "Enable building the tests" OFF)
 option(BUILD_SHARED_LIBS "Enable building all the library as shared" OFF)
 option(USE_DOUBLE_PRECISION "Enable Bullet Physic library to use double precision" ON)
@@ -74,6 +74,7 @@ find_package(Bullet 2.88 REQUIRED)
 find_package(jsoncpp 1.9.0 REQUIRED)
 find_package(yaml-cpp 0.6.3 REQUIRED)
 find_package(GTest 1.10.0 REQUIRED)
+find_package(neuralNet REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 find_library(GLU REQUIRED)
@@ -84,48 +85,57 @@ pkg_search_module(GLIB REQUIRED glib-2.0)
 # source files
 add_subdirectory(src)
 
-# Bring in the bullet graphics dependencies, etc.
-#include(src/inc.CMakeBullet.txt)
 
+# additional targets to be compiled
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-    # examples files
+    message("-- Checking other folders")
     if(BUILD_EXAMPLES)
+        message("-- Examples will be built")
         add_subdirectory(examples)
     endif()
 
     if(BUILD_TESTING)
+        message("-- Tests will be built")
         add_subdirectory(test)
         add_subdirectory(test_integration)
     endif()
 endif()
 
 
-#add_library(ntrt src)
+# configure installation directories and targets
+set(INCLUDE_INSTALL_DIR include/${PROJECT_NAME} CACHE PATH "The directory to the header files")
+set(LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)")
+set(LIB_INSTALL_DIR lib${LIB_SUFFIX} CACHE PATH "The directory to the library files")
+set (NTRT_CONFIG_CMAKE_PATH lib${LIB_SUFFIX}/cmake/${PROJECT_NAME})
 
-
+# installation process
 install(TARGETS ntrt
-        EXPORT NTRT
+        EXPORT ${PROJECT_NAME}
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin
         INCLUDES DESTINATION include
 )
+list(APPEND EXPORT_TARGETS ${PROJECT_NAME})
 
 include(CMakePackageConfigHelpers)
+configure_package_config_file(
+        ${PROJECT_NAME}Config.cmake.in
+        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
+        INSTALL_DESTINATION ${NTRT_CONFIG_CMAKE_PATH}
+        PATH_VARS INCLUDE_INSTALL_DIR
+)
 write_basic_package_version_file(
-        ntrtConfigVersion.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
         VERSION ${PACKAGE_VERSION}
         COMPATIBILITY AnyNewerVersion
 )
-
-install(EXPORT NTRT
-        FILE NTRT.cmake
-        NAMESPACE NTRT::
-        DESTINATION lib/cmake/NTRT
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
+        DESTINATION ${NTRT_CONFIG_CMAKE_PATH}
 )
-
-configure_file(src/NTRTConfig.cmake.in src/NTRTConfig.cmake @ONLY)
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/src/NTRTConfig.cmake"
-        "${CMAKE_CURRENT_BINARY_DIR}/NTRTConfigVersion.cmake"
-        DESTINATION lib/cmake/NTRT
+install(EXPORT ${PROJECT_NAME}
+        FILE ${PROJECT_NAME}.cmake
+        NAMESPACE ${PROJECT_NAME}::
+        DESTINATION ${NTRT_CONFIG_CMAKE_PATH}
 )

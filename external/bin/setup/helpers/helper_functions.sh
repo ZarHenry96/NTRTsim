@@ -231,7 +231,7 @@ function create_exist_symlink()
     fi
 
     # At this point there is no symbolic link file. We need to create it.
-    ln -s $link_target $link_location
+    ln -fs $link_target $link_location
 
     # Now verify that our symlink exists and points to a valid location. 
     if [ ! -e $link_location ]; then

@@ -50,7 +50,8 @@ popd > /dev/null
 #                          END DO NOT MODIFY                                 #
 ##############################################################################
 
-CONF_FILES=("general.conf" "boost.conf" "bullet.conf" "build.conf" "jsoncpp.conf" "googletest.conf" "yamlcpp.conf")
+CONF_FILES=("general.conf" "boost.conf" "bullet.conf" "build.conf" "jsoncpp.conf"
+            "googletest.conf" "neuralnet.conf" "yamlcpp.conf")
 
 function banner() 
 {
@@ -130,6 +131,7 @@ run_setupscript "googletest" "GoogleTest"
 run_setupscript "jsoncpp" "JsonCPP"
 run_setupscript "boost" "Boost"
 run_setupscript "yamlcpp" "YamlCPP"
+run_setupscript "neuralnet" "Neural Net"
 run_setupscript "bullet" "Bullet Physics Library"
 
 echo ""
