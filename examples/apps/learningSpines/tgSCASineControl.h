@@ -19,8 +19,8 @@
 #ifndef TG_SCA_SINE_CONTROL_H
 #define TG_SCA_SINE_CONTROL_H
 
-#include "core/tgSpringCableActuator.h"
-#include "controllers/tgPIDController.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/controllers/tgPIDController.h"
 
 // Forward declarations
 class btRigidBody;

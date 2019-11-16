@@ -27,15 +27,15 @@
 */
 
 // This application
-#include "examples/motorModel/tsTestRig.h"
+#include "apps/motorModel/tsTestRig.h"
 // This library
-#include "core/tgSpringCableActuator.h"
-#include "core/tgModel.h"
-#include "core/tgSimView.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
-#include "helpers/FileHelpers.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/helpers/FileHelpers.h"
 // The C++ Standard Library
 #include <iostream>
 #include <fstream>

@@ -16,10 +16,10 @@
  * governing permissions and limitations under the License.
 */
 
-#include "tgcreator/tgNode.h"
-#include "tgcreator/tgNodes.h"
-#include "tgcreator/tgPair.h"
-#include "tgcreator/tgPairs.h"
+#include "ntrt/tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgNodes.h"
+#include "ntrt/tgcreator/tgPair.h"
+#include "ntrt/tgcreator/tgPairs.h"
 
 void testNode(const btVector3& fixedPoint, const btVector3& axis, double angle)
 {

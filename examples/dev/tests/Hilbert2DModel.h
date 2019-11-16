@@ -34,18 +34,18 @@ else
 end procedure;
 */
 
-#include "core/tgModel.h" 
-#include "tgcreator/tgNodes.h"
-#include "core/tgSubject.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/tgcreator/tgNodes.h"
+#include "ntrt/core/tgSubject.h"
 
-#include "tgcreator/tgPairs.h"
-#include "tgcreator/tgUtil.h"
-#include "core/tgRod.h"
-#include "tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgPairs.h"
+#include "ntrt/tgcreator/tgUtil.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
 
-#include "tgcreator/tgBuildSpec.h"
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
 
 
 class Hilbert2DModel : public tgSubject<Hilbert2DModel>, public tgModel

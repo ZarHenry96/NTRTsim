@@ -1,14 +1,24 @@
 project(MuscleNP_test)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(GTEST_LIB gtest)
+find_library(GMOCK_LIB gmock)
+
 add_executable(${PROJECT_NAME} MuscleNP_test.cpp)
-target_link_directories(${PROJECT_NAME} PUBLIC
-		${CMAKE_SOURCE_DIR}/include/ntrt
+target_include_directories(${PROJECT_NAME} PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		${GTEST_INCLUDE_DIRS}
 )
 target_link_libraries(${PROJECT_NAME}
-		GTest
-		pthread
+		${LINEAR_MATH_LIB}
+		${GTEST_LIB}
+		${GMOCK_LIB}
+		Threads::Threads
 		ntrt::core
 		ntrt::core::terrain
 		ntrt::tgcreator
-		${CMAKE_BINARY_DIR}/examples/apps/contactCables/libContactCableCons.so
+		ContactCableCons
 )

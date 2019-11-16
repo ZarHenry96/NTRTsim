@@ -29,7 +29,7 @@
 // This application
 #include "T12SuperBallPayload.h"
 // This library
-#include "core/tgBasicActuator.h"
+#include "ntrt/core/tgBasicActuator.h"
 // The C++ Standard Library
 #include <cassert>
 #include <stdexcept>

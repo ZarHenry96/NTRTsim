@@ -10,8 +10,10 @@ add_library(${PROJECT_NAME}
         tgCPGCableControl.cpp
         SpineFeedbackControl.cpp
 )
-target_link_directories(${PROJECT_NAME} PUBLIC
-        ${CMAKE_SOURCE_DIR}/include/ntrt
+target_include_directories(${PROJECT_NAME} PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        ${Boost_INCLUDE_DIR}
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::sensors

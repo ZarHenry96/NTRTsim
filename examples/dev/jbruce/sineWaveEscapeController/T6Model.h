@@ -26,9 +26,9 @@
  */
 
 // This library
-#include "core/tgModel.h"
-#include "core/tgSubject.h"
-#include "core/tgRod.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSubject.h"
+#include "ntrt/core/tgRod.h"
 // The C++ Standard Library
 #include <vector>
 

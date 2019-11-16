@@ -33,13 +33,13 @@
 // Should include tgString, but compiler complains since its been
 // included from TetraSpineLearningModel. Perhaps we should move things
 // to a cpp over there
-#include "core/tgSpringCableActuator.h"
-#include "controllers/tgImpedanceController.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/controllers/tgImpedanceController.h"
 
-#include "learning/AnnealEvolution/AnnealEvolution.h"
-#include "learning/Configuration/configuration.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
+#include "ntrt/learning/Configuration/configuration.h"
 
-#include "examples/learningSpines/tgCPGActuatorControl.h"
+#include "apps/learningSpines/tgCPGActuatorControl.h"
 
 /**
  * Defining the adapters here assumes the controller is around and

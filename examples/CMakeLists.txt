@@ -1,2 +1,6 @@
 add_subdirectory(apps)
-add_subdirectory(dev)
+
+if(BUILD_DEV_EXAMPLES)
+    message("-- Dev examples will be built")
+    add_subdirectory(dev)
+endif()

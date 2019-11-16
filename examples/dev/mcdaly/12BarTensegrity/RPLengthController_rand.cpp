@@ -28,10 +28,10 @@
 // This module
 #include "RPLengthController.h"
 // This application
-#include "../../../../src/yamlbuilder/TensegrityModel.h"
+#include "ntrt/models/TensegrityModel/TensegrityModel.h"
 // This library
-#include "core/tgBasicActuator.h"
-#include "core/tgCast.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgCast.h"
 // The C++ Standard Library
 #include <cassert>
 #include <stdexcept>

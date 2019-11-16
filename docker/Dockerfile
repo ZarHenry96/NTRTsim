@@ -18,7 +18,8 @@ RUN apt-get update && apt-get install -y python3 python3-pip python3-dev libglib
                                          python3-tk python3-pydot graphviz\
                                          libgraphviz-dev graphviz-dev pkg-config time\
                                          libgl1-mesa-glx libgl1-mesa-dri mesa-utils\
-                                         mesa-opencl-icd mesa-va-drivers mesa-vdpau-drivers doxygen
+                                         mesa-opencl-icd mesa-va-drivers mesa-vdpau-drivers \
+                                         doxygen ccache
 RUN rm -rf /var/lib/apt/lists/*
 
 # install a recent version of cmake
@@ -27,7 +28,7 @@ RUN cd cmake_src && ./bootstrap && make -j`grep -c ^processor /proc/cpuinfo` && 
 RUN rm -r cmake_src
 
 # augument linker search path
-RUN echo "/usr/local/lib" >> /etc/ld.so.conf.d/local-libs.conf && ldconfig
+#RUN echo "/usr/local/lib" >> /etc/ld.so.conf.d/local-libs.conf && ldconfig
 
 # install further Python dependencies
 COPY requirements.txt .

@@ -1,7 +1,4 @@
-#add_library(
-#  tgDataObserver.cpp
-#  tgDataLogger.cpp
-#)
+find_library(LINEAR_MATH_LIB LinearMath)
 
 add_executable(AppVerticalSpine
         VerticalSpineModel.cpp
@@ -9,12 +6,18 @@ add_executable(AppVerticalSpine
         VerticalSpineBendingController.cpp
         VerticalSpinePassiveController.cpp
 )
-target_link_directories(AppVerticalSpine PUBLIC
-        ${CMAKE_SOURCE_DIR}/include/ntrt
+target_include_directories(AppVerticalSpine PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        ${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(AppVerticalSpine PRIVATE
+        learningSpines
         ntrt::core
         ntrt::tgcreator
         ntrt::sensors
-        ntrt::learning::Adapters
+        ntrt::helpers::FileHelpers
+        ${LINEAR_MATH_LIB}
 )

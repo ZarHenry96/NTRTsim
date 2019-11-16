@@ -28,8 +28,8 @@
  */
 
 // This library
-#include "core/tgObserver.h"
-#include "controllers/tgTensionController.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/controllers/tgTensionController.h"
 
 // The C++ Standard Library
 #include <vector>

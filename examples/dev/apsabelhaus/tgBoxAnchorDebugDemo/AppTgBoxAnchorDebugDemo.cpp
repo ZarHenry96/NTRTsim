@@ -28,14 +28,14 @@
 // This application
 #include "tgBoxAnchorDebugModel.h"
 // This library
-#include "core/terrain/tgBoxGround.h"
-#include "core/tgModel.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
-#include "sensors/tgDataLogger2.h"
-#include "sensors/tgRodSensorInfo.h"
-#include "sensors/tgSpringCableActuatorSensorInfo.h"
+#include "ntrt/core/terrain/tgBoxGround.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/sensors/tgDataLogger2.h"
+#include "ntrt/sensors/tgRodSensorInfo.h"
+#include "ntrt/sensors/tgSpringCableActuatorSensorInfo.h"
 // Bullet Physics
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library
@@ -85,7 +85,7 @@ int main(int argc, char** argv)
 
     // For the sensors:
     // A string prefix for the filename
-    std::string log_filename = "~/NTRTsim_logs/AppTgBoxAnchorDebugDemo";
+    std::string log_filename = "NTRTsim_logs/AppTgBoxAnchorDebugDemo";
     // First, create the data manager
     tgDataLogger2* myDataLogger = new tgDataLogger2(log_filename);
     //std::cout << myDataLogger->toString() << std::endl;

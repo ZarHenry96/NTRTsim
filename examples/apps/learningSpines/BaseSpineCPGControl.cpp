@@ -32,17 +32,15 @@
 // Should include tgString, but compiler complains since its been
 // included from BaseSpineModelLearning. Perhaps we should move things
 // to a cpp over there
-#include "core/tgSpringCableActuator.h"
-#include "controllers/tgImpedanceController.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/controllers/tgImpedanceController.h"
 #include "tgCPGActuatorControl.h"
 
-#include "helpers/FileHelpers.h"
-
-#include "learning/AnnealEvolution/AnnealEvolution.h"
-#include "learning/Configuration/configuration.h"
-
-#include "util/CPGEquations.h"
-#include "util/CPGNode.h"
+#include "ntrt/helpers/FileHelpers.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
+#include "ntrt/learning/Configuration/configuration.h"
+#include "ntrt/util/CPGEquations.h"
+#include "ntrt/util/CPGNode.h"
 
 //#define LOGGING
 

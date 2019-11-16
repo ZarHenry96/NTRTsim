@@ -27,9 +27,9 @@
 // This module
 #include "T6TensionController.h"
 // This application
-#include "T6Model.h"
+#include "apps/SUPERball/T6Model.h"
 // This library
-#include "core/tgBasicActuator.h"
+#include "ntrt/core/tgBasicActuator.h"
 // The C++ Standard Library
 #include <cassert>
 #include <stdexcept>

@@ -29,13 +29,13 @@
 // This application
 #include "Escape_T6Model.h"
 // This library
-#include "core/tgBasicActuator.h"
+#include "ntrt/core/tgBasicActuator.h"
 // For AnnealEvolution
-#include "learning/Configuration/configuration.h"
-#include "learning/AnnealEvolution/AnnealEvolution.h"
-#include "learning/Adapters/AnnealAdapter.h"
+#include "ntrt/learning/Configuration/configuration.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
+#include "ntrt/learning/Adapters/AnnealAdapter.h"
 // File helpers to use resources folder
-#include "helpers/FileHelpers.h"
+#include "ntrt/helpers/FileHelpers.h"
 // The C++ Standard Library
 #include <cassert>
 #include <cmath>

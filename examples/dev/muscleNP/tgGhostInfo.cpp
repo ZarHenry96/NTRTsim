@@ -25,19 +25,17 @@
 
 // This module
 #include "tgGhostInfo.h"
-// This application
 #include "tgGhostModel.h"
-#include "tgcreator/tgNode.h"
-#include "tgcreator/tgNodes.h"
-#include "tgcreator/tgPair.h"
-#include "tgcreator/tgPairs.h"
-// The NTRT Core Libary
-#include "core/tgBulletUtil.h"
-#include "core/tgTagSearch.h"
-#include "tgcreator/tgUtil.h"
-#include "core/tgBulletUtil.h"
-#include "core/tgWorld.h"
-
+// The NTRT Libary
+#include "ntrt/tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgNodes.h"
+#include "ntrt/tgcreator/tgPair.h"
+#include "ntrt/tgcreator/tgPairs.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgTagSearch.h"
+#include "ntrt/tgcreator/tgUtil.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgWorld.h"
 
 // The Bullet Physics library
 #include "btBulletDynamicsCommon.h"

@@ -1,28 +1,33 @@
 cmake_minimum_required(VERSION 3.15)
 
-cmake_policy(SET CMP0083 NEW)
+cmake_policy(SET CMP0069 NEW) # IPO flags behaviour
+cmake_policy(SET CMP0083 NEW) # PIE related flags (for linking phase)
 
 project(ntrt
         VERSION 1.1
-        DESCRIPTION "NTRT NASA Tensegrity_Robotics_Toolkit - A collection of software modules for the modeling,\
+        DESCRIPTION "NTRT NASA Tensegrity Robotics Toolkit - A collection of software modules for the modeling,\
                     simulation, and control of Tensegrity Robots"
         LANGUAGES CXX)
 
+# default building options that can be customized at configuration time
 option(BUILD_DOC "Enable building library documentation" OFF)
 option(BUILD_EXAMPLES "Enable building library examples" ON)
+option(BUILD_DEV_EXAMPLES "Enable building library dev examples" OFF)
 option(BUILD_TESTING "Enable building the tests" OFF)
 option(BUILD_SHARED_LIBS "Enable building all the library as shared" OFF)
 option(USE_DOUBLE_PRECISION "Enable Bullet Physic library to use double precision" ON)
+option(ENABLE_IPO "Enable Inter-Procedural Optimization" ON)
+option(ENABLE_CCACHE "Enable CCache to improve repeated compilations" OFF)
 
 if(USE_DOUBLE_PRECISION)
-    message("-- Exploit double precision")
+    message("-- Build with Double Precision")
     add_compile_definitions(BT_USE_DOUBLE_PRECISION)
 endif()
 
-# Only do these if this is the main project, and not if it is included through add_subdirectory
+# Only do these if this is the main project (not building by add_subdirectory directive)
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
-    # Optionally set things like CMAKE_CXX_STANDARD, CMAKE_POSITION_INDEPENDENT_CODE here
+    # C++ Compiler configs
     set(CMAKE_CXX_STANDARD 17)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
     set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -33,7 +38,21 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     # Let's ensure -std=c++xx instead of -std=g++xx
     set(CMAKE_CXX_EXTENSIONS OFF)
 
-    # Let's nicely support folders in IDE's
+    # program and compiler optimizations
+    include(CheckIPOSupported)
+    check_ipo_supported(RESULT IPO_SUPPORT)
+    if(IPO_SUPPORT AND ENABLE_IPO)
+        message("-- Inter-Procedural Optimization (IPO) enabled")
+        set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+    endif()
+
+    find_program(CCACHE_PROGRAM ccache)
+    if(CCACHE_PROGRAM AND ENABLE_CCACHE)
+        message("-- CCache enabled")
+        set(CMAKE_CXX_COMPILER_LAUNCHER "${CCACHE_PROGRAM}")
+    endif()
+
+    # add support folders in IDE
     set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
     # Testing only available if this is the main app
@@ -42,8 +61,8 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     # main CMakeLists.
     include(CTest)
 
+    # Docs only available if this is the main app
     if(BUILD_DOC)
-        # Docs only available if this is the main app
         find_package(Doxygen)
         if(Doxygen_FOUND)
             add_subdirectory(docs)
@@ -69,7 +88,7 @@ endif()
 list(APPEND CMAKE_PREFIX_PATH /usr/local/include ${CMAKE_SOURCE_DIR}/external/env)
 
 # load required libraries
-find_package(Boost 1.71 REQUIRED COMPONENTS regex random)
+find_package(Boost 1.71 REQUIRED COMPONENTS regex random OPTIONAL_COMPONENTS chrono system)
 find_package(Bullet 2.88 REQUIRED)
 find_package(jsoncpp 1.9.0 REQUIRED)
 find_package(yaml-cpp 0.6.3 REQUIRED)
@@ -96,6 +115,10 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
     if(BUILD_TESTING)
         message("-- Tests will be built")
+
+        set(THREADS_PREFER_PTHREAD_FLAG ON)
+        find_package(Threads REQUIRED)
+
         add_subdirectory(test)
         add_subdirectory(test_integration)
     endif()

@@ -1,12 +1,18 @@
 project(appEscape)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+
 add_executable(AppEscape
         EscapeModel.cpp
         EscapeController.cpp
         AppEscape.cpp
 )
-
-target_link_directories(AppEscape PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppEscape PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+)
 target_link_libraries(AppEscape PRIVATE
         ntrt::models::obstacles
         ntrt::tgcreator
@@ -19,4 +25,5 @@ target_link_libraries(AppEscape PRIVATE
         ntrt::core
         ntrt::core::terrain
         ntrt::tgOpenGLSupport
+        ${LINEAR_MATH_LIB}
 )

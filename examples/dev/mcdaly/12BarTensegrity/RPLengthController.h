@@ -28,9 +28,9 @@
  */
 
 // This library
-#include "core/tgObserver.h"
-#include "controllers/tgBasicController.h"
- #include "core/tgBasicActuator.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/controllers/tgBasicController.h"
+#include "ntrt/core/tgBasicActuator.h"
 
 // The C++ Standard Library
 #include <vector>
@@ -38,7 +38,7 @@
 // Forward declarations
 class TensegrityModel;
 
-#include "core/abstractMarker.h" //needed in order to fetch node positions
+#include "ntrt/core/abstractMarker.h" //needed in order to fetch node positions
 
 /**
  * A controller to apply uniform tension to a RPModel. Iterates through

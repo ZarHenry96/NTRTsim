@@ -26,23 +26,21 @@
  */
 
 #include "colSpineSine.h"
-
 #include <string>
-
 
 // Should include tgString, but compiler complains since its been
 // included from TetraSpineLearningModel. Perhaps we should move things
 // to a cpp over there
-#include "core/tgSpringCableActuator.h"
-#include "controllers/tgImpedanceController.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/controllers/tgImpedanceController.h"
 
-#include "learning/AnnealEvolution/AnnealEvolution.h"
-#include "learning/Configuration/configuration.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
+#include "ntrt/learning/Configuration/configuration.h"
 
-#include "examples/IROS_2015/hardwareSineWaves/tgSineStringControl.h"
+#include "apps/IROS_2015/hardwareSineWaves/tgSineStringControl.h"
 
 // JSON Serialization
-#include "helpers/FileHelpers.h"
+#include "ntrt/helpers/FileHelpers.h"
 #include <json/json.h>
 
 // The C++ Standard Library

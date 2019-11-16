@@ -1,3 +1,6 @@
+
+find_library(LINEAR_MATH_LIB LinearMath)
+
 list(APPEND LIBS_TetrahedralComplex
 		learningSpines
 		ntrt::sensors
@@ -9,15 +12,28 @@ list(APPEND LIBS_TetrahedralComplex
 		ntrt::learning::Configuration
 		ntrt::learning::AnnealEvolution
 		ntrt::tgOpenGLSupport
+		${LINEAR_MATH_LIB}
 )
 
 add_library(TetrahedralComplex FlemonsSpineModelLearning.cpp)
-target_link_directories(TetrahedralComplex PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(TetrahedralComplex PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		${Boost_INCLUDE_DIRS}
+)
 target_link_libraries(TetrahedralComplex PRIVATE ${LIBS_TetrahedralComplex})
 
 add_executable(AppFlemonsSpineLearning
 		FlemonsSpineModelLearning.cpp
         AppFlemonsSpineLearning.cpp
 )
-target_link_directories(AppFlemonsSpineLearning PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppFlemonsSpineLearning PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		${Boost_INCLUDE_DIRS}
+)
 target_link_libraries(AppFlemonsSpineLearning PRIVATE ${LIBS_TetrahedralComplex})

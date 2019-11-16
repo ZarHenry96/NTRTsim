@@ -30,7 +30,7 @@
 #include "core/tgModel.h" 
 #include "core/tgSubject.h"
 */
-#include "examples/learningSpines/BaseSpineModelLearning.h"
+#include "apps/learningSpines/BaseSpineModelLearning.h"
 
 /*
 // The C++ Standard Library

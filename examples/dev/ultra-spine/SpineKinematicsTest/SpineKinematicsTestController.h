@@ -27,9 +27,9 @@
  */
 
 // The NTRT core library
-#include "core/tgObserver.h"
-#include "core/tgSubject.h"
-#include "core/tgTags.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/core/tgSubject.h"
+#include "ntrt/core/tgTags.h"
 
 // The C++ standard library
 #include <string>

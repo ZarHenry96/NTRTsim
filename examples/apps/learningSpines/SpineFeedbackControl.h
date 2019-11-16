@@ -27,10 +27,9 @@
  * $Id$
  */
 
-#include "examples/learningSpines/BaseSpineCPGControl.h"
-
-#include "learning/NeuroEvolution/NeuroEvolution.h"
-#include "learning/Adapters/NeuroAdapter.h"
+#include "BaseSpineCPGControl.h"
+#include "ntrt/learning/NeuroEvolution/NeuroEvolution.h"
+#include "ntrt/learning/Adapters/NeuroAdapter.h"
 
 class tgSpringCableActuator;
 

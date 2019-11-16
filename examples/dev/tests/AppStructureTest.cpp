@@ -29,10 +29,10 @@
 #include "StructureTestModel.h"
 //#include "StructureTestController.h"
 // This library
-#include "core/tgModel.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
 // The C++ Standard Library
 #include <iostream>
 

@@ -10,10 +10,10 @@
 
 #include "LinearMath/btVector3.h"
 #include "BulletDynamics/Dynamics/btRigidBody.h"
-#include "core/tgSubject.h"
 #include "btBulletDynamicsCommon.h"
-#include "core/tgWorld.h"
-#include "core/tgBulletUtil.h"
+#include "ntrt/core/tgSubject.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/tgBulletUtil.h"
 
 
 /* ColoredMarkers are non-physical markers that are attached to a specific physical body.

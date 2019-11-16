@@ -16,7 +16,7 @@
  * governing permissions and limitations under the License.
 */
 
-#include "core/tgObserver.h"
+#include "ntrt/core/tgObserver.h"
 
 class BuildTestController : public tgObserver<BuildTestModel>
 {

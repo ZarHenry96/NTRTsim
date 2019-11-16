@@ -25,7 +25,7 @@
  */
 
 #include "ntrt/learning/NeuroEvolution/NeuroEvoMember.h"
-#include "neuralNet/NeuralNetworkV2/neuralNetwork.h"
+#include "NeuralNetworkV2/neuralNetwork.h"
 #include <fstream>
 #include <iostream>
 #include <assert.h>

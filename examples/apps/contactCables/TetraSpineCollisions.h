@@ -29,7 +29,7 @@
  */
 
 // This library
-#include "examples/learningSpines/BaseSpineModelLearning.h"
+#include "apps/learningSpines/BaseSpineModelLearning.h"
 
 // Forward Declarations
 class tgWorld;

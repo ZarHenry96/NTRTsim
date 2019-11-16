@@ -24,27 +24,23 @@
  * $Id$
  */
 
-#include "SpineFeedbackControl.h"
-
 #include <string>
-
+#include "SpineFeedbackControl.h"
 
 // Should include tgString, but compiler complains since its been
 // included from BaseSpineModelLearning. Perhaps we should move things
 // to a cpp over there
-#include "core/tgSpringCableActuator.h"
-#include "core/tgBasicActuator.h"
-#include "controllers/tgImpedanceController.h"
-#include "examples/learningSpines/tgCPGActuatorControl.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/controllers/tgImpedanceController.h"
+#include "tgCPGActuatorControl.h"
 #include "tgCPGCableControl.h"
 
-#include "helpers/FileHelpers.h"
-
-#include "learning/AnnealEvolution/AnnealEvolution.h"
-#include "learning/Configuration/configuration.h"
-
-#include "util/CPGEquationsFB.h"
-#include "util/CPGNodeFB.h"
+#include "ntrt/helpers/FileHelpers.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
+#include "ntrt/learning/Configuration/configuration.h"
+#include "ntrt/util/CPGEquationsFB.h"
+#include "ntrt/util/CPGNodeFB.h"
 
 //#define LOGGING
 #define USE_KINEMATIC

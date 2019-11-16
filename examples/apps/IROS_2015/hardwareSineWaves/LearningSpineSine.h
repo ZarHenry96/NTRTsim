@@ -28,7 +28,7 @@
  * $Id$
  */
 
-#include "examples/learningSpines/BaseSpineCPGControl.h"
+#include "apps/learningSpines/BaseSpineCPGControl.h"
 
 class tgSineStringControl;
 

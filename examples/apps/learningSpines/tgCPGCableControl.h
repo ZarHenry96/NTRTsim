@@ -19,9 +19,9 @@
 #ifndef TG_CPG_CABLE_CONTROL_H
 #define TG_CPG_CABLE_CONTROL_H
 
-#include "examples/learningSpines/tgCPGActuatorControl.h"
-#include "core/tgSpringCableActuator.h"
-#include "controllers/tgPIDController.h"
+#include "tgCPGActuatorControl.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/controllers/tgPIDController.h"
 // The Boost library
 #include "boost/multi_array.hpp"
 

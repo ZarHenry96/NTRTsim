@@ -27,11 +27,11 @@
 // This module
 #include "Escape_T6Controller.h"
 // This application
-#include "Escape_T6Model.h"
+#include "dev/steve/Escape_T6/Escape_T6Model.h"
 // This library
-#include "core/tgBasicActuator.h"
+#include "ntrt/core/tgBasicActuator.h"
 // For AnnealEvolution
-#include "learning/Configuration/configuration.h"
+#include "ntrt/learning/Configuration/configuration.h"
 // The C++ Standard Library
 #include <cassert>
 #include <cmath>

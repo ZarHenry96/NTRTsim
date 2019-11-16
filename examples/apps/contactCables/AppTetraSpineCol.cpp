@@ -30,16 +30,16 @@
 #include "colSpineSine.h"
 
 // This library
-#include "core/tgModel.h"
-#include "core/tgSimView.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
-#include "core/terrain/tgHillyGround.h"
-#include "examples/learningSpines/tgCPGLogger.h"
-#include "models/obstacles/tgWall.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/terrain/tgHillyGround.h"
+#include "apps/learningSpines/tgCPGLogger.h"
 // obstacles
-#include "models/obstacles/tgBlockField.h"
+#include "ntrt/models/obstacles/tgWall.h"
+#include "ntrt/models/obstacles/tgBlockField.h"
 // The C++ Standard Library
 #include <iostream>
 

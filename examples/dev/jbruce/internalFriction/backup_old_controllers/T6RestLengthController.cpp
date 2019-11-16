@@ -29,9 +29,9 @@
 // This application
 #include "T6Model.h"
 // This library
-#include "core/tgBasicActuator.h"
-#include "core/tgBulletSpringCable.h"
-#include "tgcreator/tgUtil.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgBulletSpringCable.h"
+#include "ntrt/tgcreator/tgUtil.h"
 // The C++ Standard Library
 #include <cassert>
 #include <stdexcept>

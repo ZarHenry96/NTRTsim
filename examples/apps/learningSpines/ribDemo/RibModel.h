@@ -28,7 +28,7 @@
  * $Id$
  */
 
-#include "examples/learningSpines/BaseSpineModelLearning.h"
+#include "apps/learningSpines/BaseSpineModelLearning.h"
 
 class tgWorld;
 

@@ -16,8 +16,8 @@
  * governing permissions and limitations under the License.
 */
 
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgUtil.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgUtil.h"
 
 int main(int argc, char** argv)
 {

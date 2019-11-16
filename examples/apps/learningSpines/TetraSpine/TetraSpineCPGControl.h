@@ -28,7 +28,7 @@
  * $Id$
  */
 
-#include "examples/learningSpines/BaseSpineCPGControl.h"
+#include "apps/learningSpines/BaseSpineCPGControl.h"
 
 /**
  * Inherits from BaseSpineCPGControl, and overrides setupCPGs so

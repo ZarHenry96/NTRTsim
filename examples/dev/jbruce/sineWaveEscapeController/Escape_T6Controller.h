@@ -29,8 +29,8 @@
 
 #include <vector>
 
-#include "core/tgObserver.h"
-#include "learning/Adapters/AnnealAdapter.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/learning/Adapters/AnnealAdapter.h"
 
 // Forward declarations
 class Escape_T6Model;

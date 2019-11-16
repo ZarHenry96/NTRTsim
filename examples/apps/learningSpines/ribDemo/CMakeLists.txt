@@ -1,10 +1,19 @@
+
+find_library(LINEAR_MATH_LIB LinearMath)
+
 add_executable(AppRibModelLearning
         RibModel.cpp
         AppRibModelLearning.cpp
 )
 
-target_link_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
-target_link_libraries(${PROJECT_NAME} PRIVATE
+target_include_directories(AppRibModelLearning PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        ${Boost_INCLUDE_DIRS}
+)
+target_link_libraries(AppRibModelLearning PRIVATE
         learningSpines
         ntrt::sensors
         ntrt::tgcreator
@@ -15,4 +24,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::learning::Configuration
         ntrt::learning::AnnealEvolution
         ntrt::tgOpenGLSupport
+        ${LINEAR_MATH_LIB}
 )

@@ -28,7 +28,7 @@
  */
 
 #include "tgPrismatic.h"
-#include "tgcreator/tgConnectorInfo.h"
+#include "ntrt/tgcreator/tgConnectorInfo.h"
 
 class btSliderConstraint;
 

@@ -25,7 +25,7 @@
 
 // This module
 #include "tgGhostModel.h"
-#include "core/tgModelVisitor.h"
+#include "ntrt/core/tgModelVisitor.h"
 // The Bullet Physics library
 #include "BulletCollision/CollisionDispatch/btGhostObject.h"
 #include "btBulletDynamicsCommon.h"

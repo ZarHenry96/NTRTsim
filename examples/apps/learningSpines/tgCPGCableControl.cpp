@@ -18,14 +18,14 @@
 
 #include "tgCPGCableControl.h"
 
-#include "core/tgSpringCableActuator.h"
-#include "core/tgBulletSpringCableAnchor.h"
-#include "core/tgBasicActuator.h"
-#include "controllers/tgImpedanceController.h"
-#include "controllers/tgPIDController.h"
-#include "core/tgCast.h"
-#include "util/CPGEquations.h"
-#include "util/CPGEquationsFB.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgBulletSpringCableAnchor.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/controllers/tgImpedanceController.h"
+#include "ntrt/controllers/tgPIDController.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/util/CPGEquations.h"
+#include "ntrt/util/CPGEquationsFB.h"
 
 // The C++ Standard Library
 #include <iostream>

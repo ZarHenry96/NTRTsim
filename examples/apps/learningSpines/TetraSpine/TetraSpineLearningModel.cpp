@@ -19,15 +19,15 @@
 // This module
 #include "TetraSpineLearningModel.h"
 // This library
-#include "core/tgCast.h"
-#include "core/tgSpringCableActuator.h"
-#include "core/tgString.h"
-#include "tgcreator/tgBuildSpec.h"
-#include "tgcreator/tgBasicActuatorInfo.h"
-#include "tgcreator/tgRodInfo.h"
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
-#include "tgcreator/tgUtil.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgString.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
+#include "ntrt/tgcreator/tgUtil.h"
 // The Bullet Physics library
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library

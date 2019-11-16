@@ -18,12 +18,12 @@
 
 #include <iostream>
 
-#include "core/tgModel.h"
-#include "core/tgSimView.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
-#include "tgcreator/tgRodInfo.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
 
 #include "BuildTestModel.h"
 #include "BuildTestController.h"

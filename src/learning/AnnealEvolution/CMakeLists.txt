@@ -20,7 +20,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${Boost_INCLUDE_DIRS}
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE
-        ntrt::learning::Configuration
+        ntrt::learning
         ntrt::helpers::FileHelpers
 )
 

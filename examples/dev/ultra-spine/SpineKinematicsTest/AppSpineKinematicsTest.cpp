@@ -25,18 +25,18 @@
  */
 
 // This application
-#include "yamlbuilder/TensegrityModel.h"
+#include "ntrt/models/TensegrityModel/TensegrityModel.h"
 #include "SpineKinematicsTestController.h"
 // This library
-#include "core/terrain/tgBoxGround.h"
-#include "core/tgModel.h"
-#include "core/tgSimulation.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgWorld.h"
-#include "sensors/tgDataLogger2.h"
-#include "sensors/tgRodSensorInfo.h"
-#include "sensors/tgSpringCableActuatorSensorInfo.h"
-#include "sensors/tgCompoundRigidSensorInfo.h"
+#include "ntrt/core/terrain/tgBoxGround.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/sensors/tgDataLogger2.h"
+#include "ntrt/sensors/tgRodSensorInfo.h"
+#include "ntrt/sensors/tgSpringCableActuatorSensorInfo.h"
+#include "ntrt/sensors/tgCompoundRigidSensorInfo.h"
 // Bullet Physics
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library

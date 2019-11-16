@@ -21,19 +21,19 @@
 #include "btBulletDynamicsCommon.h"
 #include <iostream>
 
-#include "tgcreator/tgRodInfo.h"
-#include "tgcreator/tgConnectorInfo.h"
-#include "tgcreator/tgBasicActuatorInfo.h"
-#include "tgcreator/tgRigidAutoCompound.h"
-#include "tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgConnectorInfo.h"
+#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
+#include "ntrt/tgcreator/tgRigidAutoCompound.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
 
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
-#include "tgcreator/tgUtil.h"
-#include "core/tgString.h"
-#include "tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
+#include "ntrt/tgcreator/tgUtil.h"
+#include "ntrt/core/tgString.h"
+#include "ntrt/tgcreator/tgNode.h"
 
-#include "core/tgCast.h"
+#include "ntrt/core/tgCast.h"
 
 RBStringTest::Config::Config( int segments,
                 const tgRod::Config& rodConf,

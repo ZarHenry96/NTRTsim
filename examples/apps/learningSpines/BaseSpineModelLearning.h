@@ -27,8 +27,8 @@
  * $Id$
  */
 
-#include "core/tgModel.h" 
-#include "core/tgSubject.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSubject.h"
 
 #include <map>
 #include <set>

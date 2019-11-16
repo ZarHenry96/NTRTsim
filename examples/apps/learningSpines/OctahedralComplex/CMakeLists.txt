@@ -1,3 +1,7 @@
+project(octahedralComplex)
+
+find_library(LINEAR_MATH_LIB LinearMath)
+
 list(APPEND LIBS_OctahedralComplex
         learningSpines
         ntrt::sensors
@@ -9,16 +13,29 @@ list(APPEND LIBS_OctahedralComplex
         ntrt::learning::Configuration
         ntrt::learning::AnnealEvolution
         ntrt::tgOpenGLSupport
+        ${LINEAR_MATH_LIB}
 )
 
 add_library(octahedralComplex FlemonsSpineModelLearningCL.cpp)
-target_link_directories(octahedralComplex PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(octahedralComplex PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        ${Boost_INCLUDE_DIRS}
+)
 target_link_libraries(octahedralComplex PRIVATE ${LIBS_OctahedralComplex})
 
 add_executable(AppFlemonsSpineLearningCL
         FlemonsSpineModelLearningCL.cpp
         AppFlemonsSpineLearningCL.cpp
 )
-target_link_directories(AppFlemonsSpineLearningCL PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppFlemonsSpineLearningCL PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        ${Boost_INCLUDE_DIRS}
+)
 target_link_libraries(AppFlemonsSpineLearningCL PRIVATE ${LIBS_OctahedralComplex})
 

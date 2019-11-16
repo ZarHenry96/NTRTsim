@@ -33,8 +33,8 @@
 
 #include <iostream>
 
-#include "tgcreator/tgNode.h"
-#include "tgcreator/tgStructureInfo.h"
+#include "ntrt/tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
 
 tgPrismaticInfo::tgPrismaticInfo(const tgPrismatic::Config& config) :
     m_config(config),

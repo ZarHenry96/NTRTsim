@@ -19,23 +19,23 @@
 #ifndef CONNECTOR_TEST_MODEL_H
 #define CONNECTOR_TEST_MODEL_H
 
-#include "core/tgModel.h" 
-#include "core/tgBasicActuator.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgBasicActuator.h"
 
-#include "core/tgSubject.h"
-#include "core/tgModelVisitor.h"
+#include "ntrt/core/tgSubject.h"
+#include "ntrt/core/tgModelVisitor.h"
 
 #include "btBulletDynamicsCommon.h"
 #include <iostream>
 #include <set>
 
-#include "tgcreator/tgRodInfo.h"
-#include "tgcreator/tgBasicActuatorInfo.h"
-#include "tgcreator/tgRigidAutoCompound.h"
-#include "tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
+#include "ntrt/tgcreator/tgRigidAutoCompound.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
 
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
 
 
 class StructureTestModel: public tgSubject<StructureTestModel>, public tgModel

@@ -18,11 +18,11 @@
 
 #include "ConnectorTestModel.h"
 //#include "ConnectorTestController.h"
-#include "core/tgModel.h"
-#include "core/tgSimView.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
 #include <iostream>
 
 int main(int argc, char** argv)

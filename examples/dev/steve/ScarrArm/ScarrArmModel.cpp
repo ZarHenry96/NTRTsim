@@ -25,15 +25,15 @@
 // This module
 #include "ScarrArmModel.h"
 // This library
-#include "core/tgBasicActuator.h"
-#include "core/tgRod.h"
-#include "core/abstractMarker.h"
-#include "tgcreator/tgBuildSpec.h"
-#include "tgcreator/tgBasicActuatorInfo.h"
-#include "tgcreator/tgKinematicContactCableInfo.h"
-#include "tgcreator/tgRodInfo.h"
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/core/abstractMarker.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
+#include "ntrt/tgcreator/tgKinematicContactCableInfo.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
 // The Bullet Physics library
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library

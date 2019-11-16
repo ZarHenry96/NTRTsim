@@ -28,7 +28,7 @@
  */
 
 // This library
-#include "core/tgObserver.h"
+#include "ntrt/core/tgObserver.h"
 
 // Forward declarations
 class T6Model;

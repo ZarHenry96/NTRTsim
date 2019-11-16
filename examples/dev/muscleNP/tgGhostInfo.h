@@ -30,10 +30,10 @@
 // The C++ Standard Library
 #include <set>
 // This library
-#include "core/tgTaggable.h"
-#include "core/tgModel.h"
-#include "tgcreator/tgRigidInfo.h"
-#include "tgcreator/tgBoxInfo.h"
+#include "ntrt/core/tgTaggable.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/tgcreator/tgRigidInfo.h"
+#include "ntrt/tgcreator/tgBoxInfo.h"
 //Bullet Physics
 #include "LinearMath/btVector3.h"
 #include "LinearMath/btQuaternion.h"

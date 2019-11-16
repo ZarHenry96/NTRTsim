@@ -1,17 +1,22 @@
 project(WorldConf_Spines_test)
 
-add_executable(${PROJECT_NAME} WorldConf_Spines_test.cpp)
+find_library(GTEST_LIB gtest)
+find_library(GMOCK_LIB gmock)
 
-target_link_directories(${PROJECT_NAME} PUBLIC
-		${CMAKE_SOURCE_DIR}/include/ntrt
+add_executable(${PROJECT_NAME} WorldConf_Spines_test.cpp)
+target_include_directories(${PROJECT_NAME} PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		${GTEST_INCLUDE_DIRS}
 )
 target_link_libraries(${PROJECT_NAME}
-		GTest
-		pthread
+		${GTEST_LIB}
+		${GMOCK_LIB}
+		Threads::Threads
 		ntrt::core
-		ntrt::core::terrain
-		ntrt::tgcreator
 		ntrt::helpers::FileHelpers
-		${CMAKE_BINARY_DIR}/examples/apps/learningSpines/liblearningSpines.so
-		${CMAKE_BINARY_DIR}/examples/apps/learningSpines/TetrahedralComplex/libTetrahedralComplex.so
+		learningSpines
+		TetrahedralComplex
 )

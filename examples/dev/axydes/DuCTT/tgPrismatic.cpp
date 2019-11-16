@@ -27,8 +27,8 @@
 #include "tgPrismatic.h"
 
 #include "BulletDynamics/ConstraintSolver/btSliderConstraint.h"
-#include "core/tgBulletUtil.h"
-#include "core/tgWorldBulletPhysicsImpl.h"
+#include "ntrt/core/tgBulletUtil.h"
+#include "ntrt/core/tgWorldBulletPhysicsImpl.h"
 
 // The C++ Standard Library
 #include <cmath>

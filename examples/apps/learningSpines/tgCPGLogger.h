@@ -28,8 +28,8 @@
 
 
 // This library
-#include "core/tgObserver.h"
 #include <string>
+#include "ntrt/core/tgObserver.h"
 
 // Forward declarations
 class BaseSpineCPGControl;

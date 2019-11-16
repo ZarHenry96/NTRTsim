@@ -24,7 +24,7 @@
  * @author Brian Tietz and Atil Iscen
  * $Id$
  */
- 
+
 #include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
 #include "ntrt/learning/Configuration/configuration.h"
 #include "ntrt/core/tgString.h"
@@ -45,7 +45,7 @@ using namespace std;
 #else
 
 //  For everything else
-unsigned long long rdtsc(){
+unsigned long long ae_rdtsc(){
     unsigned int lo,hi;
     __asm__ __volatile__ ("rdtsc" : "=a" (lo), "=d" (hi));
     return ((unsigned long long)hi << 32) | lo;
@@ -85,8 +85,8 @@ Temp(1.0)
     
     bool learning = myconfigdataaa.getintvalue("learning");
 
-    srand(rdtsc());
-    eng.seed(rdtsc());
+    srand(ae_rdtsc());
+    eng.seed(ae_rdtsc());
 
     for(int j=0;j<numberOfControllers;j++)
     {

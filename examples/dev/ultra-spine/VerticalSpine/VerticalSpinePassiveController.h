@@ -28,11 +28,11 @@
  */
 
 // This library
-#include "core/tgObserver.h"
-#include "core/tgSubject.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/core/tgSubject.h"
 
 // the data collection class
-#include "sensors/tgDataObserver.h"
+#include "ntrt/sensors/tgDataObserver.h"
 #include <string>
 
 // Forward declarations

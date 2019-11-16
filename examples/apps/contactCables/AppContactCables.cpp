@@ -25,13 +25,13 @@
 // This application
 #include "ContactCableDemo.h"
 // This library
-#include "core/terrain/tgBoxGround.h"
-#include "core/terrain/tgEmptyGround.h"
-#include "core/tgModel.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
-#include "tgcreator/tgUtil.h"
+#include "ntrt/core/terrain/tgBoxGround.h"
+#include "ntrt/core/terrain/tgEmptyGround.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/tgcreator/tgUtil.h"
 
 // The Bullet Physics Library
 #include "LinearMath/btVector3.h"

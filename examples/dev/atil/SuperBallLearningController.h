@@ -28,9 +28,9 @@
  */
 
 // This library
-#include "core/tgObserver.h"
-#include "learning/Adapters/AnnealAdapter.h"
 #include <vector>
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/learning/Adapters/AnnealAdapter.h"
 #include "BulletDynamics/Dynamics/btRigidBody.h"
 
 // Forward declarations

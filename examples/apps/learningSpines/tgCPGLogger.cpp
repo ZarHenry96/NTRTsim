@@ -24,7 +24,6 @@
  */
 
 #include "tgCPGLogger.h"
-
 #include "BaseSpineCPGControl.h"
 
 #include <iostream>

@@ -27,7 +27,7 @@
  * $Id$
  */
 
-#include "examples/learningSpines/BaseSpineCPGControl.h"
+#include "BaseSpineCPGControl.h"
 
 /**
  * KinematicSpineCPGControl learns the parameters for a CPG system on a

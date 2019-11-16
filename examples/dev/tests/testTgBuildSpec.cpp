@@ -16,9 +16,9 @@
  * governing permissions and limitations under the License.
 */
 
-#include "core/tgRod.h"
-#include "tgcreator/tgBuildSpec.h"
-#include "tgcreator/tgRodInfo.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
 
 int main(int argc, char** argv)
 {

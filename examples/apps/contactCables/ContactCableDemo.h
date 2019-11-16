@@ -28,8 +28,8 @@
 */
 
 // This library
-#include "core/tgModel.h"
-#include "core/tgSubject.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSubject.h"
 
 // The Bullet Physics Library
 #include "LinearMath/btVector3.h"

@@ -1,3 +1,5 @@
+find_library(LINEAR_MATH_LIB LinearMath)
+
 list(APPEND LIBS_TimestepTest
 		ntrt::tgcreator
 		ntrt::util
@@ -6,15 +8,23 @@ list(APPEND LIBS_TimestepTest
 		ntrt::core
 		ntrt::core::terrain
 		ntrt::tgOpenGLSupport
+		${LINEAR_MATH_LIB}
 )
 
-add_library(TimestepTest tsTestRig.cpp)
-target_link_directories(TimestepTest PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+add_library(TimestepTest tsTestRig.cpp tsTestRig.h)
+target_include_directories(TimestepTest PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+)
 target_link_libraries(TimestepTest PRIVATE ${LIBS_TimestepTest})
 
 add_executable(AppTSTest
         tsTestRig.cpp
+		tsTestRig.h
         AppTimestepTest.cpp
 )
-target_link_directories(AppTSTest PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppTSTest PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+)
 target_link_libraries(AppTSTest PRIVATE ${LIBS_TimestepTest})

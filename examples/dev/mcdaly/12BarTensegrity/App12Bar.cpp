@@ -25,14 +25,14 @@
  */
 
 // This application
-#include "../../../../src/yamlbuilder/TensegrityModel.h"
+#include "ntrt/models/TensegrityModel/TensegrityModel.h"
 #include "RPLengthController.h"
 // This library
-#include "core/terrain/tgBoxGround.h"
-#include "core/tgModel.h"
-#include "core/tgSimulation.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgWorld.h"
+#include "ntrt/core/terrain/tgBoxGround.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgWorld.h"
 // Bullet Physics
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library

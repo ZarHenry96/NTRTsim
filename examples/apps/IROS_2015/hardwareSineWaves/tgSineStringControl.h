@@ -19,7 +19,7 @@
 #ifndef TG_SINE_STRING_CONTRL_H
 #define TG_SINE_STRING_CONTRL_H
 
-#include "core/tgSpringCableActuator.h"
+#include "ntrt/core/tgSpringCableActuator.h"
 
 // Forward declarations
 class btRigidBody;

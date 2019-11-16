@@ -16,10 +16,10 @@
 # add_library(TensegrityModel
 #     TensegrityModel.cpp)
 
-add_executable(AppSTLParser
+add_executable(AppSTLParser AppSTLParser.cpp)
 #    TensegrityModel.cpp
 #    RPLengthController.h
 #    RPLengthController_rand.cpp
-        AppSTLParser.cpp)
 
 
+configure_file("LunarSurface-ascii.stl" "LunarSurface-ascii.stl" COPYONLY)

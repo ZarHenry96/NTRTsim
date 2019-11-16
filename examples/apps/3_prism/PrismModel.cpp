@@ -25,21 +25,20 @@
 // This module
 #include "PrismModel.h"
 // This library
-#include "core/tgBasicActuator.h"
-#include "core/tgRod.h"
-#include "tgcreator/tgBuildSpec.h"
-#include "tgcreator/tgBasicActuatorInfo.h"
-#include "tgcreator/tgRodInfo.h"
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
 // The Bullet Physics library
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library
 #include <stdexcept>
 
 /**
- * Anonomous namespace so we don't have to declare the config in
- * the header.
+ * Anonymous namespace so we don't have to declare the config in the header.
  */
 namespace
 {
@@ -57,32 +56,24 @@ namespace
         double triangle_length;
         double triangle_height;
         double prism_height;  
-    } c =
-   {
+    } c = {
        0.2,     // density (mass / length^3)
-       0.31,     // radius (length)
-       1000.0,   // stiffness (mass / sec^2)
-       10.0,     // damping (mass / sec)
-       500.0,     // pretension (mass * length / sec^2)
-       10.0,     // triangle_length (length)
-       10.0,     // triangle_height (length)
-       20.0,     // prism_height (length)
-  };
+       0.31,    // radius (length)
+       1000.0,  // stiffness (mass / sec^2)
+       10.0,    // damping (mass / sec)
+       500.0,   // pretension (mass * length / sec^2)
+       10.0,    // triangle_length (length)
+       10.0,    // triangle_height (length)
+       20.0,    // prism_height (length)
+    };
 } // namespace
 
-PrismModel::PrismModel() :
-tgModel() 
-{
-}
+PrismModel::PrismModel() : tgModel() {}
 
-PrismModel::~PrismModel()
-{
-}
+PrismModel::~PrismModel() {}
 
-void PrismModel::addNodes(tgStructure& s,
-                            double edge,
-                            double width,
-                            double height)
+void PrismModel::addNodes(tgStructure& s, double edge,
+                            double width, double height)
 {
     // bottom right
     s.addNode(-edge / 2.0, 0, 0); // 1

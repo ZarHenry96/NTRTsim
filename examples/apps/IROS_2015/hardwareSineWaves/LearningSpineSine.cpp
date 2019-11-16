@@ -26,19 +26,18 @@
  */
 
 #include "LearningSpineSine.h"
-
 #include <string>
 
 
 // Should include tgString, but compiler complains since its been
 // included from TetraSpineLearningModel. Perhaps we should move things
 // to a cpp over there
-#include "core/tgSpringCableActuator.h"
-#include "core/tgBasicActuator.h"
-#include "controllers/tgImpedanceController.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/controllers/tgImpedanceController.h"
 
-#include "learning/AnnealEvolution/AnnealEvolution.h"
-#include "learning/Configuration/configuration.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
+#include "ntrt/learning/Configuration/configuration.h"
 
 #include "tgSineStringControl.h"
 

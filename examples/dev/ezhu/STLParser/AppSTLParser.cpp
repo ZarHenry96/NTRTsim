@@ -1,9 +1,9 @@
 #include <iostream>
 #include <fstream>
-#include <stdlib.h>
-#include <stdio.h>
+#include <cstdlib>
+#include <cstdio>
 #include <string>
-#include <math.h>
+#include <cmath>
 
 using namespace std;
 

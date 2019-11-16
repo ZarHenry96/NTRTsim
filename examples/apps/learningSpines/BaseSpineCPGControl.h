@@ -30,11 +30,10 @@
 #include <vector>
 #include "boost/multi_array.hpp"
 
-#include "core/tgSubject.h"
-#include "core/tgObserver.h"
-#include "sensors/tgDataObserver.h"
-
-#include "learning/Adapters/AnnealAdapter.h"
+#include "ntrt/core/tgSubject.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/sensors/tgDataObserver.h"
+#include "ntrt/learning/Adapters/AnnealAdapter.h"
 
 //This should probably be a forward declaration
 #include "BaseSpineModelLearning.h"

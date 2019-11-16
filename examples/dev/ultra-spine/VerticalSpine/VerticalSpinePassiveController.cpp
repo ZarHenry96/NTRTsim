@@ -29,15 +29,15 @@
 #include "VerticalSpineModel.h"
 // This library
 //#include "core/tgBasicActuator.h"
-#include "core/tgSpringCableActuator.h"
-#include "core/tgString.h"
-#include "sensors/tgDataObserver.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgString.h"
+#include "ntrt/sensors/tgDataObserver.h"
 // The C++ Standard Library
 #include <cassert>
 #include <stdexcept>
 #include <vector>
 
-#include "helpers/FileHelpers.h"
+#include "ntrt/helpers/FileHelpers.h"
 
 VerticalSpinePassiveController::VerticalSpinePassiveController():
   m_updateTime(0.01),

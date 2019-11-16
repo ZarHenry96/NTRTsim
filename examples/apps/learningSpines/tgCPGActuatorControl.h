@@ -27,8 +27,8 @@
  * $Id$
  */
 
-#include "util/tgBaseCPGNode.h"
-#include "core/tgSpringCableActuator.h"
+#include "ntrt/util/tgBaseCPGNode.h"
+#include "ntrt/core/tgSpringCableActuator.h"
 // The Boost library
 #include "boost/multi_array.hpp"
 

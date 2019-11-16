@@ -27,15 +27,15 @@
 
 // This application
 #include "FlemonsSpineModelLearning.h"
-#include "examples/learningSpines/BaseSpineCPGControl.h"
-#include "examples/learningSpines/KinematicSpineCPGControl.h"
-#include "examples/learningSpines/tgCPGLogger.h"
+#include "apps/learningSpines/BaseSpineCPGControl.h"
+#include "apps/learningSpines/KinematicSpineCPGControl.h"
+#include "apps/learningSpines/tgCPGLogger.h"
 // This library
-#include "core/tgModel.h"
-#include "core/tgSimView.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
 // The C++ Standard Library
 #include <iostream>
 

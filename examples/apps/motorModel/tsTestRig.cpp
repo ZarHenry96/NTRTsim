@@ -25,16 +25,15 @@
 // This module
 #include "tsTestRig.h"
 // This library
-#include "core/tgKinematicActuator.h"
-#include "tgcreator/tgKinematicActuatorInfo.h"
-
-#include "core/tgBasicActuator.h"
-#include "core/tgRod.h"
-#include "tgcreator/tgBuildSpec.h"
-#include "tgcreator/tgBasicActuatorInfo.h"
-#include "tgcreator/tgRodInfo.h"
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
+#include "ntrt/core/tgKinematicActuator.h"
+#include "ntrt/tgcreator/tgKinematicActuatorInfo.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
 // The Bullet Physics library
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library

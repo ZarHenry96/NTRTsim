@@ -28,7 +28,7 @@
  */
 
 // NTRTSim
-#include "core/tgObserver.h"
+#include "ntrt/core/tgObserver.h"
 
 // The C++ Standard Library
 #include <vector>

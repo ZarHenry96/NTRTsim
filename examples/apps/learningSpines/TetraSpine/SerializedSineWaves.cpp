@@ -31,18 +31,18 @@
 #include "TetraSpineLearningModel.h"
 
 // NTRTSim
-#include "core/tgSpringCableActuator.h"
-#include "controllers/tgImpedanceController.h"
-#include "tgcreator/tgUtil.h"
-#include "core/tgCast.h"
-#include "core/tgBasicActuator.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/controllers/tgImpedanceController.h"
+#include "ntrt/tgcreator/tgUtil.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/tgBasicActuator.h"
 
 // The C++ Standard Library
 #include <stdexcept>
 #include <string>
 
 // JSON Serialization
-#include "helpers/FileHelpers.h"
+#include "ntrt/helpers/FileHelpers.h"
 #include <json/json.h>
 
 SerializedSineWaves::Config::Config(std::string fileName)

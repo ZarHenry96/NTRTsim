@@ -14,6 +14,7 @@ find_dependency(GTest 1.10.0)
 set ( NTRT_INCLUDE_DIR  "@INCLUDE_INSTALL_DIR@" )
 set ( NTRT_INCLUDE_DIRS "@INCLUDE_INSTALL_DIR@" )
 set ( NTRT_LIBRARIES    "@EXPORT_TARGETS@" )
+set ( NTRT_ROOT         "@CMAKE_INSTALL_PREFIX@" )
 set ( NTRT_LIBRARY_DIRS "@LIB_INSTALL_DIR@" )
 
 # Add the targets file

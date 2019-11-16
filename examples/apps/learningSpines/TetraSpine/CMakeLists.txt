@@ -1,3 +1,7 @@
+
+find_library(JSONCPP_LIB jsoncpp)
+find_library(LINEAR_MATH_LIB LinearMath)
+
 list(APPEND LIBS_TetraSpineLearning
         learningSpines
         ntrt::sensors
@@ -11,16 +15,22 @@ list(APPEND LIBS_TetraSpineLearning
         ntrt::learning::AnnealEvolution
         ntrt::tgOpenGLSupport
         ntrt::helpers::FileHelpers
-        jsoncpp
+        ${LINEAR_MATH_LIB}
+        ${JSONCPP_LIB}
 )
 
 add_executable(AppTetraSpineLearning
         TetraSpineLearningModel.cpp
         TetraSpineCPGControl.cpp
         AppTetraSpineLearning.cpp
-
 )
-target_link_directories(AppTetraSpineLearning PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppTetraSpineLearning PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        ${Boost_INCLUDE_DIRS}
+)
 target_link_libraries(AppTetraSpineLearning PRIVATE ${LIBS_TetraSpineLearning})
 
 add_executable(AppTetraSpineSerial
@@ -28,7 +38,13 @@ add_executable(AppTetraSpineSerial
         TetraSpineLearningModel.cpp
         AppTetraSpineSerial.cpp
 )
-target_link_directories(AppTetraSpineSerial PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppTetraSpineSerial PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        ${Boost_INCLUDE_DIRS}
+)
 target_link_libraries(AppTetraSpineSerial PRIVATE ${LIBS_TetraSpineLearning})
 
 configure_file("controlVars.json" "controlVars.json" COPYONLY)

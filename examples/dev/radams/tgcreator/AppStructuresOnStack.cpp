@@ -27,10 +27,10 @@
 // This application
 
 // This library
-#include "tgcreator/tgNode.h"
-#include "tgcreator/tgNodes.h"
-#include "tgcreator/tgPair.h"
-#include "tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgNode.h"
+#include "ntrt/tgcreator/tgNodes.h"
+#include "ntrt/tgcreator/tgPair.h"
+#include "ntrt/tgcreator/tgStructure.h"
 // The C++ Standard Library
 #include <iostream>
 

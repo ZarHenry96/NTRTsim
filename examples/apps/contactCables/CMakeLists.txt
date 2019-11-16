@@ -1,5 +1,8 @@
 project(contactCables)
 
+find_library(LINEAR_MATH_LIB LinearMath)
+find_library(BULLET_DYNAMICS_LIB BulletDynamics)
+
 list(APPEND LIBS_ContactCables
         ntrt::models::obstacles
         tetraSpineLearningSine
@@ -10,18 +13,29 @@ list(APPEND LIBS_ContactCables
         ntrt::core
         ntrt::core::terrain
         ntrt::tgOpenGLSupport
+        ${LINEAR_MATH_LIB}
+        ${BULLET_DYNAMICS_LIB}
 )
 
-
-add_library(tetraCollisions
+add_library(tetraCollisionsCC
         TetraSpineCollisions.cpp
         colSpineSine.cpp
 )
-target_link_directories(tetraCollisions PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
-target_link_libraries(tetraCollisions PRIVATE ${LIBS_ContactCables})
+target_include_directories(tetraCollisionsCC PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+)
+target_link_libraries(tetraCollisionsCC PRIVATE ${LIBS_ContactCables})
 
 add_library(ContactCableCons ContactCableDemo.cpp)
-target_link_directories(ContactCableCons PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(ContactCableCons PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+)
 target_link_libraries(ContactCableCons PRIVATE ${LIBS_ContactCables})
 
 add_executable(AppTetraSpineCol
@@ -29,12 +43,22 @@ add_executable(AppTetraSpineCol
         colSpineSine.cpp
         AppTetraSpineCol.cpp
 )
-target_link_directories(AppTetraSpineCol PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppTetraSpineCol PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+)
 target_link_libraries(AppTetraSpineCol PRIVATE ${LIBS_ContactCables})
 			
 add_executable(AppContactCables
         ContactCableDemo.cpp
         AppContactCables.cpp
 )
-target_link_directories(AppContactCables PUBLIC ${CMAKE_SOURCE_DIR}/include/ntrt)
+target_include_directories(AppContactCables PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+)
 target_link_libraries(AppContactCables PRIVATE ${LIBS_ContactCables})

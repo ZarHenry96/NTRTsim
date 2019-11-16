@@ -40,12 +40,12 @@ using namespace std;
 #ifdef _WIN32
 
 //  Windows
-#define rdtsc  __rdtsc
+#define ne_rdtsc  __rdtsc
 
 #else
 
 //  For everything else
-unsigned long long rdtsc(){
+unsigned long long ne_rdtsc(){
     unsigned int lo,hi;
     __asm__ __volatile__ ("rdtsc" : "=a" (lo), "=d" (hi));
     return ((unsigned long long)hi << 32) | lo;
@@ -88,8 +88,8 @@ suffix(suff)
         throw std::invalid_argument("Population will grow with given parameters");
     }
     
-   srand(rdtsc());
-	eng.seed(rdtsc());
+   srand(ne_rdtsc());
+	eng.seed(ne_rdtsc());
 
 	for(int j=0;j<numberOfControllers;j++)
 	{

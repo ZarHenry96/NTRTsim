@@ -27,11 +27,11 @@
 // This module
 #include "BaseSpineModelLearning.h"
 // This library
-#include "core/tgCast.h"
-#include "core/tgSpringCableActuator.h"
-#include "core/tgBaseRigid.h"
-#include "core/tgRod.h"
-#include "core/tgString.h"
+#include "ntrt/core/tgCast.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgBaseRigid.h"
+#include "ntrt/core/tgRod.h"
+#include "ntrt/core/tgString.h"
 // The C++ Standard Library
 #include <algorithm> // std::fill
 #include <iostream>

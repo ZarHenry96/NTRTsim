@@ -23,14 +23,14 @@
 */
 
 // This application
-#include "examples/contactCables/ContactCableDemo.h"
+#include "apps/contactCables/ContactCableDemo.h"
 // This library
-#include "core/tgModel.h"
-#include "core/tgSimView.h"
-#include "core/tgSimViewGraphics.h"
-#include "core/tgSimulation.h"
-#include "core/tgWorld.h"
-#include "core/terrain/tgEmptyGround.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSimView.h"
+#include "ntrt/core/tgSimViewGraphics.h"
+#include "ntrt/core/tgSimulation.h"
+#include "ntrt/core/tgWorld.h"
+#include "ntrt/core/terrain/tgEmptyGround.h"
 
 #include "LinearMath/btVector3.h"
 

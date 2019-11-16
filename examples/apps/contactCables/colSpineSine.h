@@ -28,8 +28,8 @@
  * $Id$
  */
 
-#include "examples/learningSpines/BaseSpineCPGControl.h"
-#include "core/tgObserver.h"
+#include "apps/learningSpines/BaseSpineCPGControl.h"
+#include "ntrt/core/tgObserver.h"
 
 class tgSineStringControl;
 

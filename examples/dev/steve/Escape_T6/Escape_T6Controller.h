@@ -29,10 +29,10 @@
 
 #include <vector>
 
-#include "core/tgObserver.h"
-#include "learning/Adapters/AnnealAdapter.h"
-#include "learning/Configuration/configuration.h"
-#include "learning/AnnealEvolution/AnnealEvolution.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/learning/Adapters/AnnealAdapter.h"
+#include "ntrt/learning/Configuration/configuration.h"
+#include "ntrt/learning/AnnealEvolution/AnnealEvolution.h"
 
 // Forward declarations
 class Escape_T6Model;

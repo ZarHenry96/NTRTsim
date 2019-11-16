@@ -28,7 +28,7 @@
  */
 
 // This application
-#include "core/tgModel.h" 
+#include "ntrt/core/tgModel.h"
 // The Bullet Physics library
 #include "LinearMath/btVector3.h"
 // The C++ Standard Library

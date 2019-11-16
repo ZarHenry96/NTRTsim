@@ -23,8 +23,8 @@
 */
 
 // This application
-#include "examples/IROS_2015/TetraSpineStatic/TetraSpineStaticModel_hf.h"
-#include "examples/IROS_2015/TetraSpineStatic/SerializedSpineControl.h"
+#include "apps/IROS_2015/tetraSpineStatic/TetraSpineStaticModel_hf.h"
+#include "apps/IROS_2015/tetraSpineStatic/SerializedSpineControl.h"
 // This library
 #include "ntrt/core/tgModel.h"
 #include "ntrt/core/tgSimView.h"

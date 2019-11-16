@@ -1,14 +1,20 @@
 project(prismModel_serialize)
 
+find_library(JSONCPP_LIB jsoncpp)
+
 add_executable(AppPrismModel_Serialize
 		PrismModel.cpp
+		PrismModel.h
 		AppPrismModel.cpp
 )
-target_link_directories(AppPrismModel_Serialize PUBLIC
-		${CMAKE_SOURCE_DIR}/include/ntrt
+target_include_directories(AppPrismModel_Serialize PUBLIC
+		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+		${CMAKE_SOURCE_DIR}/external/env/include
+		/usr/local/include
 )
 target_link_libraries(AppPrismModel_Serialize PRIVATE
-		jsoncpp
+		${JSONCPP_LIB}
 		ntrt::helpers::FileHelpers
 		ntrt::tgcreator
 		ntrt::util

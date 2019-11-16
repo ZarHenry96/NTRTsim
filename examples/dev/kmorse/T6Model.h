@@ -26,12 +26,12 @@
  */
 
 // This library
-#include "core/tgModel.h"
-#include "core/tgSubject.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSubject.h"
 
 //used for data observer
-#include "core/tgObserver.h"
-#include "sensors/tgDataObserver.h"
+#include "ntrt/core/tgObserver.h"
+#include "ntrt/sensors/tgDataObserver.h"
  
 // The C++ Standard Library
 #include <vector>

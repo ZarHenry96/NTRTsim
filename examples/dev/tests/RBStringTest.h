@@ -19,13 +19,12 @@
 #ifndef RB_STRING_TEST_H
 #define RB_STRING_TEST_H
 
-#include "core/tgModel.h" 
-
-#include "core/tgSubject.h"
+#include "ntrt/core/tgModel.h"
+#include "ntrt/core/tgSubject.h"
 
 // SubModels
-#include "core/tgBasicActuator.h"
-#include "core/tgRod.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgRod.h"
 
 #include <set>
 #include <map>

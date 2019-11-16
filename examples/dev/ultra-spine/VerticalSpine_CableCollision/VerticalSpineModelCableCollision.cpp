@@ -26,24 +26,24 @@
 // This module
 #include "VerticalSpineModelCableCollision.h"
 // This library
-#include "core/tgCast.h"
-//#include "core/tgBasicActuator.h"
+#include "ntrt/core/tgCast.h"
+//#include "ntrt/core/tgBasicActuator.h"
 //replaced
-#include "core/tgSpringCableActuator.h"
+#include "ntrt/core/tgSpringCableActuator.h"
 //added
-#include "core/tgSphere.h"
-#include "core/tgString.h"
-#include "tgcreator/tgBuildSpec.h"
-//#include "tgcreator/tgBasicActuatorInfo.h"
+#include "ntrt/core/tgSphere.h"
+#include "ntrt/core/tgString.h"
+#include "ntrt/tgcreator/tgBuildSpec.h"
+//#include "ntrt/tgcreator/tgBasicActuatorInfo.h"
 //added
-#include "tgcreator/tgBasicContactCableInfo.h"
-#include "tgcreator/tgRigidAutoCompound.h"
-#include "tgcreator/tgRodInfo.h"
+#include "ntrt/tgcreator/tgBasicContactCableInfo.h"
+#include "ntrt/tgcreator/tgRigidAutoCompound.h"
+#include "ntrt/tgcreator/tgRodInfo.h"
 //added
-#include "tgcreator/tgSphereInfo.h"
-#include "tgcreator/tgStructure.h"
-#include "tgcreator/tgStructureInfo.h"
-#include "tgcreator/tgUtil.h"
+#include "ntrt/tgcreator/tgSphereInfo.h"
+#include "ntrt/tgcreator/tgStructure.h"
+#include "ntrt/tgcreator/tgStructureInfo.h"
+#include "ntrt/tgcreator/tgUtil.h"
 // The Bullet Physics library
 #include "btBulletDynamicsCommon.h"
 // The C++ Standard Library

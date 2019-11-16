@@ -26,19 +26,19 @@
 // This module
 #include "SpineKinematicsTestController.h"
 // This application
-#include "yamlbuilder/TensegrityModel.h"
+#include "ntrt/models/TensegrityModel/TensegrityModel.h"
 // This library
-#include "core/tgBasicActuator.h"
-#include "core/tgSpringCableActuator.h"
-#include "core/tgString.h"
-#include "core/tgTags.h"
+#include "ntrt/core/tgBasicActuator.h"
+#include "ntrt/core/tgSpringCableActuator.h"
+#include "ntrt/core/tgString.h"
+#include "ntrt/core/tgTags.h"
 
 // The C++ Standard Library
 #include <cassert>
 #include <stdexcept>
 #include <vector>
 #include <iostream>
-#include "helpers/FileHelpers.h"
+#include "ntrt/helpers/FileHelpers.h"
 #include <stdexcept>
 
 // Constructor assigns variables, does some simple sanity checks.
