@@ -1,6 +1,34 @@
 NASA Tensegrity Robotics Toolkit
 ===============
 
+17/11/19 - Updated building system
+---------
+In this branch (`library-review`) is provided an updated building system for NTRT library, which supports `C++17
+` standard and it compiles with `g++ v9.2.1`.
+
+ Moreover, the version of each library dependency has been updated:
+
+ - Boost 1.71.0
+ - Bullet 2.88
+ - GoogleTest 1.10.0
+ - Jsoncpp 1.9.1
+ - YAML-cpp 0.6.3
+ - NeuralNetwork (re-packed to contain the patch diffs)
+
+**Note 1:** to allow the upgrade of Bullet library, the old demo employed by NTRT has been added as a
+direct component of the library. Nonetheless, it would be suggested to upgrade this component to adopt latest
+Bullet APIs.
+
+**Note 2:** in the process of reviewing library organization, some components dedicated to its dependencies building
+might have been removed.
+
+**Note 3:** the whole building process has been tested only in a controlled environment, that is Ubuntu 19.10
+in a Docker container.  In addition, it employs a recent `cmake` version, `v3.15`, which might be a
+ too *strong* requisite for certain projects.
+ 
+**Note 4:** the script `setup.sh` is provided to explain and perform the whole process needed to setup the dependencies
+ and build the NTRT library.
+
 12/19/18 - Warning: G++ > 7 Build Failures (Ubuntu 18.04 / Bionic)
 ---------
 
