@@ -89,7 +89,7 @@ list(APPEND CMAKE_PREFIX_PATH /usr/local/include ${CMAKE_SOURCE_DIR}/external/en
 
 # load required libraries
 find_package(Boost 1.71 REQUIRED COMPONENTS regex random OPTIONAL_COMPONENTS chrono system)
-find_package(Bullet 2.88 REQUIRED)
+find_package(Bullet 2.82 REQUIRED)
 find_package(jsoncpp 1.9.0 REQUIRED)
 find_package(yaml-cpp 0.6.3 REQUIRED)
 find_package(GTest 1.10.0 REQUIRED)
@@ -142,23 +142,32 @@ install(TARGETS ntrt
 list(APPEND EXPORT_TARGETS ${PROJECT_NAME})
 
 include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
+        VERSION ${PACKAGE_VERSION}
+        COMPATIBILITY AnyNewerVersion
+)
+
+# copy all the headers to the install directory
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/${INCLUDE_INSTALL_DIR}
+        DESTINATION ${CMAKE_INSTALL_PREFIX}/${INCLUDE_INSTALL_DIR}
+        FILES_MATCHING PATTERN "*.h"
+)
+
+# provide a config file so that find_package directive can be used
 configure_package_config_file(
         ${PROJECT_NAME}Config.cmake.in
         ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
         INSTALL_DESTINATION ${NTRT_CONFIG_CMAKE_PATH}
         PATH_VARS INCLUDE_INSTALL_DIR
 )
-write_basic_package_version_file(
-        ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
-        VERSION ${PACKAGE_VERSION}
-        COMPATIBILITY AnyNewerVersion
-)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
         ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
         DESTINATION ${NTRT_CONFIG_CMAKE_PATH}
 )
+
 install(EXPORT ${PROJECT_NAME}
-        FILE ${PROJECT_NAME}.cmake
+        FILE ${PROJECT_NAME}-targets.cmake
         NAMESPACE ${PROJECT_NAME}::
         DESTINATION ${NTRT_CONFIG_CMAKE_PATH}
 )
