@@ -7,6 +7,11 @@
 # build external dependencies
 echo "Installing library dependencies"
 pushd external > /dev/null
+
+# generate configuration files (if they have not already been created)
+./setup_dependencies.sh
+
+# build and install library dependencies
 ./setup_dependencies.sh
 popd
 

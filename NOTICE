@@ -12,6 +12,6 @@ individual license agreements.  In order to make installation easy, we
 have provided configuration scripts which will fetch and install the
 required libraries for you.  The key third party libraries NTRTsim
 depends upon are:
-- Boost C++ Libraries: http://www.boost.org/
-- The Bullet Physics Library: http://bulletphysics.org
+- Boost C++ Libraries: https://www.boost.org/
+- The Bullet Physics Library: https://pybullet.org/
 - FreeGLUT: http://freeglut.sourceforge.net/
