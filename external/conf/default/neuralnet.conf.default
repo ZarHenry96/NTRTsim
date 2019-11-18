@@ -29,7 +29,7 @@
 # By default, setup will download and install Anguelov's neural net library under your env directory.
 # If you have an existing install, you should change 
 # NEURALNET_INSTALL_PREFIX to what was used for installation (likely /usr/local).
-NEURALNET_INSTALL_PREFIX="$ENV_DIR"
+NEURALNET_INSTALL_PREFIX="$INSTALL_PREFIX"
 
 # This is the location where you unzipped the package (or, where it will
 # be unzipped if necessary). 

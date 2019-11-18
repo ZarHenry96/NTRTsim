@@ -26,7 +26,7 @@
 # By default, setup will download and install JsonCPP under your env directory.
 # If you have an existing JsonCPP install, you should change 
 # JSONCPP_INSTALL_PREFIX to what was used for installation (likely /usr/local).
-JSONCPP_INSTALL_PREFIX="$ENV_DIR"
+JSONCPP_INSTALL_PREFIX="$INSTALL_PREFIX"
 
 # Location where JsonCPP is to be built if necessary, or where it was built if 
 # you're using an existing package. This doesn't need to be set unless jsoncpp is

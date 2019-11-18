@@ -27,7 +27,7 @@
 # By default, setup will download and install bullet under your env directory.
 # If you have an existing bullet install, you should change 
 # BULLET_INSTALL_PREFIX to what was used for installation (likely /usr/local).
-BULLET_INSTALL_PREFIX="$ENV_DIR"
+BULLET_INSTALL_PREFIX="$INSTALL_PREFIX"
 
 # Location where bullet is to be built, or where it was built if you're using 
 # an existing package.

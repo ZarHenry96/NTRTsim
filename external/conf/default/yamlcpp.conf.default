@@ -26,7 +26,7 @@
 # By default, setup will download and install YamlCPP under your env directory.
 # If you have an existing YamlCPP install, you should change
 # YAMLCPP_INSTALL_PREFIX to what was used for installation (likely /usr/local).
-YAMLCPP_INSTALL_PREFIX="$ENV_DIR"
+YAMLCPP_INSTALL_PREFIX="$INSTALL_PREFIX"
 
 # Location where YamlCPP is to be built if necessary, or where it was built if
 # you're using an existing package. This doesn't need to be set unless yamlcpp is

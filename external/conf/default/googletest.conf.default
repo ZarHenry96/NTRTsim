@@ -26,7 +26,7 @@
 # By default, setup will download and install GoogleTest under your env directory.
 # If you have an existing GoogleTest install, you should change
 # GOOGLETEST_INSTALL_PREFIX to what was used for installation (likely /usr/local).
-GOOGLETEST_INSTALL_PREFIX="$ENV_DIR"
+GOOGLETEST_INSTALL_PREFIX="$INSTALL_PREFIX"
 
 # Location where GMockTest is to be built if necessary, or where it was built if
 # you're using an existing package. This doesn't need to be set unless gmocktest is
