@@ -42,6 +42,6 @@ function set_multicore_make()
     alias make="make -j$max_cores"
 }
 
-if [[ "$script_name" != "setup.sh" ]]; then
+if [[ "$script_name" != "setup_dependencies.sh" ]]; then
     set_multicore_make
 fi
