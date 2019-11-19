@@ -4,8 +4,8 @@ add_library(BigPuppySymmetricSpiralSegments BigPuppySymmetricSpiralSegments.cpp)
 target_include_directories(BigPuppySymmetricSpiralSegments PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(BigPuppySymmetricSpiralSegments PRIVATE
@@ -23,8 +23,8 @@ add_executable(AppBigPuppySymmetricSpiralSegments
 target_include_directories(AppBigPuppySymmetricSpiralSegments PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(AppBigPuppySymmetricSpiralSegments PRIVATE

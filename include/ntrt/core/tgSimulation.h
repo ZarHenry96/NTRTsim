@@ -75,6 +75,13 @@ public:
     void run(int steps) const;
 
     /**
+     * Run for a specific number of steps. Calls tgSimView.limitRun(int steps)
+     * @param[in] steps the number of steps to update the graphics
+     * Note: this does not render the simulation
+     */
+    void limitRun(int steps) const;
+
+    /**
      * Add a Tensegrity to the simulation.
      * @param[in] pModel a pointer to a tgModel representing a Tensegrity;
      * an exception is thrown if it is NULL

@@ -274,6 +274,11 @@ void tgSimulation::run(int steps) const
     m_view.run(steps);
 }
 
+void tgSimulation::limitRun(int steps) const
+{
+    m_view.limitRun(steps);
+}
+
 bool tgSimulation::invariant() const
 {
   return true;

@@ -6,7 +6,7 @@ find_library(BULLET_DYN_LIB BulletDynamics)
 find_library(OPENGL_LIB OpenGL)
 find_library(GLUT_LIB glut)
 
-add_library(TensegrityModel SHARED
+add_library(${PROJECT_NAME}
         TensegrityModel.cpp
         TensegrityModelController.cpp
 )
@@ -14,7 +14,7 @@ add_library(ntrt::models::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
         ${BULLET_INCLUDE_DIRS}
         ${YAML_CPP_INCLUDE_DIR}
 )
@@ -23,7 +23,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::tgcreator
         ntrt::util
         ntrt::sensors
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::tgOpenGLSupport
         ${YAML_CPP_LIB}
         ${LinearMath}
@@ -36,7 +36,7 @@ add_executable(BuildModel
 )
 target_include_directories(BuildModel PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
         ${BULLET_INCLUDE_DIRS}
         ${YAML_CPP_INCLUDE_DIR}
 )
@@ -49,6 +49,16 @@ target_link_libraries(BuildModel PRIVATE
         ntrt::tgcreator
         ntrt::util
         ntrt::sensors
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::tgOpenGLSupport
 )
+
+# library installation
+install(TARGETS ${PROJECT_NAME}
+        EXPORT ${CMAKE_PROJECT_NAME}
+        LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+        ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
+        RUNTIME DESTINATION ${BIN_INSTALL_DIR}
+        INCLUDES DESTINATION ${INCLUDE_INSTALL_DIR}
+)
+list(APPEND EXPORT_TARGETS ${PROJECT_NAME})

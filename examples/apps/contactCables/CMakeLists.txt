@@ -11,7 +11,7 @@ list(APPEND LIBS_ContactCables
         ntrt::sensors
         ntrt::tgcreator
         ntrt::core
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::tgOpenGLSupport
         ${LINEAR_MATH_LIB}
         ${BULLET_DYNAMICS_LIB}
@@ -24,8 +24,8 @@ add_library(tetraCollisionsCC
 target_include_directories(tetraCollisionsCC PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
 )
 target_link_libraries(tetraCollisionsCC PRIVATE ${LIBS_ContactCables})
 
@@ -33,8 +33,8 @@ add_library(ContactCableCons ContactCableDemo.cpp)
 target_include_directories(ContactCableCons PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
 )
 target_link_libraries(ContactCableCons PRIVATE ${LIBS_ContactCables})
 
@@ -46,8 +46,8 @@ add_executable(AppTetraSpineCol
 target_include_directories(AppTetraSpineCol PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
 )
 target_link_libraries(AppTetraSpineCol PRIVATE ${LIBS_ContactCables})
 			
@@ -58,7 +58,7 @@ add_executable(AppContactCables
 target_include_directories(AppContactCables PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
 )
 target_link_libraries(AppContactCables PRIVATE ${LIBS_ContactCables})

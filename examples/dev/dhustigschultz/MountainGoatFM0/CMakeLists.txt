@@ -4,8 +4,8 @@ add_library(MountainGoatFM0 MountainGoatFM0.cpp)
 target_include_directories(MountainGoatFM0 PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(MountainGoatFM0 PRIVATE
@@ -22,8 +22,8 @@ add_executable(AppMountainGoatFM0
 target_include_directories(AppMountainGoatFM0 PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(AppMountainGoatFM0 PRIVATE

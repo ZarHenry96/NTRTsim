@@ -5,7 +5,7 @@ find_library(JSONCPP_LIB jsoncpp)
 add_executable(TestJSON testjson.cpp)
 target_include_directories(TestJSON PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
         ${CMAKE_SOURCE_DIR}/external/env/include
         /usr/local/include
 )

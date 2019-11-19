@@ -5,7 +5,7 @@ add_executable(AppBoxStructureTest
 )
 target_include_directories(AppBoxStructureTest PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
         ${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(AppBoxStructureTest PRIVATE

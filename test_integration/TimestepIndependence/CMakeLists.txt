@@ -7,8 +7,8 @@ add_executable(${PROJECT_NAME} MotorTimestep_test.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${GTEST_INCLUDE_DIRS}
 )
 target_link_libraries(${PROJECT_NAME}

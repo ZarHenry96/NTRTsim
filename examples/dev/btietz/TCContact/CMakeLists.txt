@@ -4,8 +4,8 @@ add_library(FlemonsSpineContact FlemonsSpineModelContact.cpp)
 target_include_directories(FlemonsSpineContact PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
         ${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(FlemonsSpineContact PRIVATE
@@ -24,8 +24,8 @@ add_executable(AppFlemonsSpineContact
 target_include_directories(AppFlemonsSpineContact PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
         ${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(AppFlemonsSpineContact PRIVATE

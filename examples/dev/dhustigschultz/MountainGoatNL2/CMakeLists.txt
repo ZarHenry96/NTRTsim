@@ -4,8 +4,8 @@ add_library(MountainGoatNL2 MountainGoatNL2.cpp)
 target_include_directories(MountainGoatNL2 PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(MountainGoatNL2 PRIVATE
@@ -22,8 +22,8 @@ add_executable(AppMountainGoatNL2
 target_include_directories(AppMountainGoatNL2 PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(AppMountainGoatNL2 PRIVATE

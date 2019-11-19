@@ -9,7 +9,7 @@ list(APPEND TETRASPINEH_LIB
         ntrt::tgcreator
         ntrt::core
         ntrt::util
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::tgOpenGLSupport
         ntrt::helpers::FileHelpers
         ${LINEAR_MATH_LIB}
@@ -24,8 +24,8 @@ add_library(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE ${TETRASPINEH_LIB})
 
@@ -38,7 +38,7 @@ add_executable(AppTetraSpineStatic
 target_include_directories(AppTetraSpineStatic PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
 )
 target_link_libraries(AppTetraSpineStatic PRIVATE ${TETRASPINEH_LIB})

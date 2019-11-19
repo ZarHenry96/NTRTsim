@@ -87,6 +87,13 @@ endif()
 # where required libraries can be found on the system
 list(APPEND CMAKE_PREFIX_PATH /usr/local/include ${CMAKE_SOURCE_DIR}/external/env)
 
+# configure installation directories and targets
+set(INCLUDE_INSTALL_DIR include CACHE PATH "The directory to the header files")
+set(LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)")
+set(LIB_INSTALL_DIR lib${LIB_SUFFIX} CACHE PATH "The directory to the library files")
+set(BIN_INSTALL_DIR bin CACHE PATH "The directory to the binary files")
+set (NTRT_CONFIG_CMAKE_PATH ${LIB_INSTALL_DIR}/cmake/${PROJECT_NAME})
+
 # load required libraries
 find_package(Boost 1.71 REQUIRED COMPONENTS regex random OPTIONAL_COMPONENTS chrono system)
 find_package(Bullet 2.82 REQUIRED)
@@ -124,23 +131,7 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     endif()
 endif()
 
-
-# configure installation directories and targets
-set(INCLUDE_INSTALL_DIR include/${PROJECT_NAME} CACHE PATH "The directory to the header files")
-set(LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)")
-set(LIB_INSTALL_DIR lib${LIB_SUFFIX} CACHE PATH "The directory to the library files")
-set (NTRT_CONFIG_CMAKE_PATH lib${LIB_SUFFIX}/cmake/${PROJECT_NAME})
-
-# installation process
-install(TARGETS ntrt
-        EXPORT ${PROJECT_NAME}
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib
-        RUNTIME DESTINATION bin
-        INCLUDES DESTINATION include
-)
-list(APPEND EXPORT_TARGETS ${PROJECT_NAME})
-
+# ========== INSTALLATION PROCESS ========= #
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
         ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
@@ -149,9 +140,9 @@ write_basic_package_version_file(
 )
 
 # copy all the headers to the install directory
-install(DIRECTORY ${CMAKE_SOURCE_DIR}/${INCLUDE_INSTALL_DIR}
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/${INCLUDE_INSTALL_DIR}
-        FILES_MATCHING PATTERN "*.h"
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/ntrt
+        DESTINATION ${INCLUDE_INSTALL_DIR}
+        FILES_MATCHING PATTERN "*.h" PATTERN "*.hpp"
 )
 
 # provide a config file so that find_package directive can be used
@@ -166,7 +157,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake
         DESTINATION ${NTRT_CONFIG_CMAKE_PATH}
 )
 
-install(EXPORT ${PROJECT_NAME}
+install(EXPORT ntrt
         FILE ${PROJECT_NAME}-targets.cmake
         NAMESPACE ${PROJECT_NAME}::
         DESTINATION ${NTRT_CONFIG_CMAKE_PATH}

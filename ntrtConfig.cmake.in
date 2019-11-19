@@ -1,5 +1,7 @@
 include(CMakeFindDependencyMacro)
 
+@PACKAGE_INIT@
+
 # set dependencies
 #find_dependency(Boost 1.71 REQUIRED)
 #find_dependency(Bullet 2.82 REQUIRED)
@@ -18,4 +20,9 @@ set ( NTRT_ROOT         "@CMAKE_INSTALL_PREFIX@" )
 set ( NTRT_LIBRARY_DIRS "@LIB_INSTALL_DIR@" )
 
 # Add the targets file
-include("@CMAKE_INSTALL_PREFIX@/@PROJECT_NAME@/@PROJECT_NAME@-targets.cmake")
+if (NOT TARGET ntrt)
+    include("@CMAKE_INSTALL_PREFIX@/@NTRT_CONFIG_CMAKE_PATH@/@PROJECT_NAME@-targets.cmake")
+endif ()
+
+
+

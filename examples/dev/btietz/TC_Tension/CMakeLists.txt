@@ -7,8 +7,8 @@ add_library(JSONGoalTension JSONGoalTension.cpp)
 target_include_directories(JSONGoalTension PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
         ${Boost_INCLUDE_DIRS}
         ${NN_INCLUDE_DIRS}
 )
@@ -36,8 +36,8 @@ add_executable(AppTC_Tension
 target_include_directories(AppTC_Tension PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
         ${Boost_INCLUDE_DIRS}
         ${NN_INCLUDE_DIRS}
         ${CMAKE_SOURCE_DIR}/external/env/include

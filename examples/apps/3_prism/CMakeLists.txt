@@ -7,14 +7,14 @@ add_executable(AppPrismModel
 )
 target_include_directories(AppPrismModel PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
 )
 target_link_libraries(AppPrismModel PRIVATE
         ntrt::tgcreator
         ntrt::util
         ntrt::sensors
         ntrt::core
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::tgOpenGLSupport
 )
 

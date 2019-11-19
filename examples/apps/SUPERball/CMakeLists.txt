@@ -9,7 +9,7 @@ add_executable(AppSUPERball
 target_include_directories(AppSUPERball PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
 )
 target_link_libraries(AppSUPERball PRIVATE

@@ -11,14 +11,24 @@ add_library(${PROJECT_NAME}
         tgCraterGround.cpp
         tgHillyGround.cpp
 )
-add_library(ntrt::core::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
+add_library(ntrt::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
         ${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE
         ${LINEAR_MATH_LIB}
         ${BULLET_COLLISION_LIB}
 )
+
+# library installation
+install(TARGETS ${PROJECT_NAME}
+        EXPORT ${CMAKE_PROJECT_NAME}
+        LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+        ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
+        RUNTIME DESTINATION ${BIN_INSTALL_DIR}
+        INCLUDES DESTINATION ${INCLUDE_INSTALL_DIR}
+)
+list(APPEND EXPORT_TARGETS ${PROJECT_NAME})

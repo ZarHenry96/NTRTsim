@@ -9,8 +9,8 @@ add_executable(AppRibModelLearning
 target_include_directories(AppRibModelLearning PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
         ${Boost_INCLUDE_DIRS}
 )
 target_link_libraries(AppRibModelLearning PRIVATE
@@ -19,7 +19,7 @@ target_link_libraries(AppRibModelLearning PRIVATE
         ntrt::tgcreator
         ntrt::core
         ntrt::util
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::learning::Adapters
         ntrt::learning::Configuration
         ntrt::learning::AnnealEvolution

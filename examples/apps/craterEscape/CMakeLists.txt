@@ -10,8 +10,8 @@ add_executable(AppEscape
 target_include_directories(AppEscape PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
 )
 target_link_libraries(AppEscape PRIVATE
         ntrt::models::obstacles
@@ -23,7 +23,7 @@ target_link_libraries(AppEscape PRIVATE
         ntrt::learning::AnnealEvolution
         ntrt::helpers::FileHelpers
         ntrt::core
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::tgOpenGLSupport
         ${LINEAR_MATH_LIB}
 )

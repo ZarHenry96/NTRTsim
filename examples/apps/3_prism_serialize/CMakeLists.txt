@@ -9,7 +9,7 @@ add_executable(AppPrismModel_Serialize
 )
 target_include_directories(AppPrismModel_Serialize PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+		$<INSTALL_INTERFACE:include>
 		${CMAKE_SOURCE_DIR}/external/env/include
 		/usr/local/include
 )
@@ -20,7 +20,7 @@ target_link_libraries(AppPrismModel_Serialize PRIVATE
 		ntrt::util
 		ntrt::sensors
 		ntrt::core
-		ntrt::core::terrain
+		ntrt::terrain
 		ntrt::tgOpenGLSupport
 )
 

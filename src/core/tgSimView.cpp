@@ -158,6 +158,27 @@ void tgSimView::run(int steps)
     }
 }
 
+void tgSimView::limitRun(int steps)
+{
+    if (m_pSimulation != NULL)
+    {
+        // The tgSimView has been passed to a tgSimulation
+        // This would normally run forever, but this is just for testing
+        m_renderTime = 0;
+        double totalTime = 0.0;
+        for (int i = 0; i < steps; i++) {
+            m_pSimulation->step(m_stepSize);
+            m_renderTime += m_stepSize;
+            totalTime += m_stepSize;
+
+            if (m_renderTime >= m_renderRate) {
+                render();
+                m_renderTime = 0;
+            }
+        }
+    }
+}
+
 void tgSimView::render() const
 {
 	if ((m_pSimulation != NULL) && (m_pModelVisitor != NULL))

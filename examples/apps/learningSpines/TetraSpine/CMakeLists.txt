@@ -9,7 +9,7 @@ list(APPEND LIBS_TetraSpineLearning
         ntrt::controllers
         ntrt::core
         ntrt::util
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::learning::Adapters
         ntrt::learning::Configuration
         ntrt::learning::AnnealEvolution
@@ -27,8 +27,8 @@ add_executable(AppTetraSpineLearning
 target_include_directories(AppTetraSpineLearning PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
         ${Boost_INCLUDE_DIRS}
 )
 target_link_libraries(AppTetraSpineLearning PRIVATE ${LIBS_TetraSpineLearning})
@@ -41,8 +41,8 @@ add_executable(AppTetraSpineSerial
 target_include_directories(AppTetraSpineSerial PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+        $<INSTALL_INTERFACE:include>
+        $<INSTALL_INTERFACE:examples>
         ${Boost_INCLUDE_DIRS}
 )
 target_link_libraries(AppTetraSpineSerial PRIVATE ${LIBS_TetraSpineLearning})

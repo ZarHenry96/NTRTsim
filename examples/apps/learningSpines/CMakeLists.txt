@@ -12,7 +12,7 @@ add_library(${PROJECT_NAME}
 )
 target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
+        $<INSTALL_INTERFACE:include>
         ${Boost_INCLUDE_DIR}
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -20,7 +20,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         ntrt::tgcreator
         ntrt::core
         ntrt::util
-        ntrt::core::terrain
+        ntrt::terrain
         ntrt::learning::Adapters
         ntrt::learning::Configuration
         ntrt::learning::AnnealEvolution

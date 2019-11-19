@@ -4,8 +4,8 @@ add_library(BigDoxieNoFeet BigDoxieNoFeet.cpp)
 target_include_directories(BigDoxieNoFeet PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(BigDoxieNoFeet PRIVATE
@@ -22,8 +22,8 @@ add_executable(AppBigDoxieNoFeet
 target_include_directories(AppBigDoxieNoFeet PUBLIC
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/examples>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
-		$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/examples>
+		$<INSTALL_INTERFACE:include>
+		$<INSTALL_INTERFACE:examples>
 		${BULLET_INCLUDE_DIRS}
 )
 target_link_libraries(AppBigDoxieNoFeet PRIVATE

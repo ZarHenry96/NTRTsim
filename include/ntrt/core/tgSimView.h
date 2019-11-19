@@ -85,6 +85,11 @@ public:
 	 * Run for a specific number of steps
 	 */
     virtual void run(int steps);
+
+	/**
+	 * Run for a specific number of steps
+	 */
+    virtual void limitRun(int steps);
     
     /**
      * Send the tgModelVisitor to the simulation
