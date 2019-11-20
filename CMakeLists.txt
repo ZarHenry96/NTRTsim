@@ -92,7 +92,7 @@ set(INCLUDE_INSTALL_DIR include CACHE PATH "The directory to the header files")
 set(LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)")
 set(LIB_INSTALL_DIR lib${LIB_SUFFIX} CACHE PATH "The directory to the library files")
 set(BIN_INSTALL_DIR bin CACHE PATH "The directory to the binary files")
-set (NTRT_CONFIG_CMAKE_PATH ${LIB_INSTALL_DIR}/cmake/${PROJECT_NAME})
+set(NTRT_CONFIG_CMAKE_PATH ${LIB_INSTALL_DIR}/cmake/${PROJECT_NAME})
 
 # load required libraries
 find_package(Boost 1.71 REQUIRED COMPONENTS regex random OPTIONAL_COMPONENTS chrono system)
