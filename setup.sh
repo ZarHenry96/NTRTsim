@@ -5,12 +5,13 @@
 # ======================= #
 
 gen_conf='INSTALL_PREFIX="/usr/local"'
+ADD_FLAGS=''
 
 if [ $# -gt 0 ]; then
     if [ "$1" == "local" ]; then
       echo -e "\nInstallation files will be placed in a local folder\n"
       # install NTRT library in a custom location
-      ADD_FLAGS='-DCMAKE_INSTALL_PREFIX="../env" -DCMAKE_INSTALL_NAME_DIR="../env"'
+      ADD_FLAGS='-DCMAKE_INSTALL_PREFIX="external/env" -DCMAKE_INSTALL_NAME_DIR="external/env"'
       # updates general dependencies configuration
       gen_conf='INSTALL_PREFIX="$ENV_DIR"'
     else
@@ -19,9 +20,7 @@ if [ $# -gt 0 ]; then
 fi
 
 # updates general dependencies configuration
-if test ! -f "external/conf/general.conf"; then
-    echo ${gen_conf} > external/conf/general.conf
-fi
+echo ${gen_conf} > external/conf/general.conf
 
 # build external dependencies
 echo "Installing library dependencies"
